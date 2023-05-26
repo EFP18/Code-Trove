@@ -35,7 +35,13 @@ router.get('/profile/:id', withAuth, async (req, res) => {
     const postDb = await Post.findAll({
       where: {
         id: req.params.id
-      }
+      },
+      include: [
+        {
+          model: User,
+          attributes: ['username']
+        }
+      ]
     });
 
     // Serialize data so the template can read it
