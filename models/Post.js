@@ -1,4 +1,4 @@
-GE-models
+
 const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -35,3 +35,5 @@ Post.init(
         modelName: 'post'
     }
 );
+
+module.exports = Post
