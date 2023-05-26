@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Trove</title>
+</head>
+<body>
+  <div>
+    <nav>
+      <ul>
+        <a href="/">Code Feed</a>
+        <a href="/profile">My Profile</a>
+        <a href="">Contact Us</a>
+        {{#if loggedIn}}
+        <button id="logout" class="">Logout</button>
+        {{else}}
+        <a href="/login">Login</a>
+        <a href="/signup">Sign Up</a>
+        {{/if}}
+      </ul>
+    </nav>
+    <header>
+      <h1>Welcome to the Code Trove!</h1>
+      <h2>Save your code snippets and get ideas from fellow coders!</h2>
+    </header>
+
+    <main>
+      <h3>Code Feed</h3>
+      <div> 
+        {{{body}}} 
+      </div>
+    </main>
+    <footer>Thank you!</footer>
+    
+    {{#if loggedIn}}
+    <script src = "/js/logout.js"></script>
+  </div>
+</body>
+</html>
