@@ -10,17 +10,20 @@
   <div>
     <nav>
       <ul>
-        <a href="/">Code Feed</a>
-        <a href="/profile">My Profile</a>
-        <a href="">Contact Us</a>
-        {{#if loggedIn}}
-        <button id="logout" class="">Logout</button>
-        {{else}}
-        <a href="/login">Login</a>
-        <a href="/signup">Sign Up</a>
-        {{/if}}
+        <li><a href="/">Code Feed</a></li>
+        <li><a href="/profile">My Profile</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li>
+          {{#if loggedIn}}
+          <a id="logout" class="">Logout</a>
+          {{else}}
+          <a href="/login">Login</a>
+          <a href="/signup">Sign Up</a>
+          {{/if}} 
+        </li>
       </ul>
     </nav>
+
     <header>
       <h1>Welcome to the Code Trove!</h1>
       <h2>Save your code snippets and get ideas from fellow coders!</h2>
@@ -32,10 +35,10 @@
         {{{body}}} 
       </div>
     </main>
-    <footer>Thank you!</footer>
+
+    <footer> Thank you! The Code Trove Folks &copy; </footer>
     
-    {{#if loggedIn}}
-    <script src = "/js/logout.js"></script>
   </div>
 </body>
 </html>
+<script src = "/js/logout.js"></script>
