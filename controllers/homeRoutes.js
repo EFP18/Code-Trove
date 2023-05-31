@@ -62,6 +62,10 @@ router.get('/profile/:id', withAuth, async (req, res) => {
   }
 });
 
+router.get("/profile", (req, res) => {
+  res.render('profile')
+})
+
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
