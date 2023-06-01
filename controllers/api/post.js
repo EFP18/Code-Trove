@@ -1,8 +1,9 @@
 const router = require('express').Router();
-const Post = require('../../models/Post');
+const { Post } = require('../../models/Post');
+const withAuth = require('../../utils/auth')
 
 // Creates a post
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     Post.create({
         title: req.body.title,
         body: req.body.body,
@@ -16,28 +17,28 @@ router.post('/', (req, res) => {
     });
 });
 
-// Pulls all posts
-router.get('/', (req, res) => {
-    Post.findAll().then((postData) => {
-        res.json(postData);
-    });
-})
+// // Pulls all posts
+// router.get('/', (req, res) => {
+//     Post.findAll().then((postData) => {
+//         res.json(postData);
+//     });
+// })
 
-// Pulls a post
-router.get('/:isbn', (req, res) => {
-    Post.findOne(
-        {
-            where: {
-                isbn: req.params.isbn
-            },
-        }
-    ).then((postData) => {
-        res.json(postData);
-    });
-});
+// // Pulls a post
+// router.get('/:id', (req, res) => {
+//     Post.findOne(
+//         {
+//             where: {
+//                 id: req.params.id
+//             },
+//         }
+//     ).then((postData) => {
+//         res.json(postData);
+//     });
+// });
 
 // Updates a post
-router.put('/:isbn', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Post.update(
         {
             title: req.body.title,
@@ -45,7 +46,7 @@ router.put('/:isbn', (req, res) => {
         },
         {
             where: {
-                isbn: req.params.isbn,
+                id: req.params.id,
             },
         }
     )
@@ -56,10 +57,10 @@ router.put('/:isbn', (req, res) => {
 });
 
 // Delete a post
-router.delete('/:isbn', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({
         where: {
-            isbn: req.params.isbn,
+            id: req.params.id,
         },
     })
         .then((deletedPost) => {
