@@ -79,13 +79,7 @@ Use this [project presentation template](https://docs.google.com/presentation/d/
 
 * Repository contains quality README file with description, screenshot, and link to deployed application.
 
-### Application Quality: 15%
 
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application is responsive.
 
 ### Presentation 10%
 
