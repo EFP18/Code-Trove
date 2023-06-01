@@ -29,11 +29,11 @@ nav {
 } */
 
 body {
-  /* background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */ 
+  /* background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
   background-image: url("../img/609.jpg");
   background-size: cover;
   background-position: bottom;
-  font-family: 'Saira Condensed', sans-serif;
+  font-family: "Saira Condensed", sans-serif;
 }
 
 .feed-title {
@@ -52,8 +52,6 @@ body {
 .small-font {
   font-size: 12px;
 }
-
-
 
 /* Post Container */
 .post-container {
@@ -120,7 +118,6 @@ div.inner-box pre {
   text-align: right;
 }
 
-
 /* Signup Container */
 #signup {
   margin-top: 30px;
@@ -162,8 +159,6 @@ footer {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -183,7 +178,6 @@ footer {
   gap: 1in; /* Add the desired spacing between the links */
 }
 
-
 .footer-links a {
   color: #888888;
   text-decoration: none;
@@ -199,7 +193,6 @@ footer {
 
 footer .success-text {
   font-size: 30px;
-  color: #58AAF2;
+  color: #58aaf2;
   font-weight: bold;
-
 }
