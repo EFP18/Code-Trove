@@ -27,6 +27,17 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/about', async (req, res) => {
+  try {
+    res.render('about', {
+      pageName: 'About - Code Trove',
+    });
+
+  } catch(err) {
+    res.status(500).json(err);
+  }
+});
+
 // GET all posts of a specific user
 // use middleware to check if the user is logged in
 router.get('/profile/:id', withAuth, async (req, res) => {

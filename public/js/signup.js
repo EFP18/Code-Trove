@@ -5,18 +5,19 @@ const signupForm = async (event) => {
   const password = document.querySelector('#password-input').value.trim();
 
   if (email && password) {
-    const response = await fetch('/api/signup', {
+    const response = await fetch(`/api/user/signup`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
+      headers: { 'Content-Type': 'application/json' },
     });
 
     const data = await response.json();
 
     if (response.ok) {
-      window.location.replace('/profile');
+      document.location.replace('/profile');
+      alert('Success! You have successfully signed up!');
     } else {
-      alert(data);
+      alert('Failed to sign up.');
     }
 
     emailInput.value = '';
