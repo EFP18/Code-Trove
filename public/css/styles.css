@@ -1,0 +1,205 @@
+/* Navigation */
+nav {
+  position: relative;
+  z-index: 1;
+}
+
+/* Banner
+.banner {
+  position: relative;
+  width: 100%;
+  height: 425px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://cdn.wallpapersafari.com/9/59/ZcVzSn.jpeg");
+  background-size: cover;
+  background-position: top;
+  transform-origin: left top;
+  transform: skewY(-5deg);
+  z-index: 1; 
+} */
+
+body {
+  /* background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */ 
+  background-image: url("../img/609.jpg");
+  background-size: cover;
+  background-position: bottom;
+  font-family: 'Saira Condensed', sans-serif;
+}
+
+.feed-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.terms-box {
+  margin-top: 30px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.small-font {
+  font-size: 12px;
+}
+
+
+
+/* Post Container */
+.post-container {
+  margin: 30px 0;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #eae7e7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Snippet Box */
+div.snippet-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.snippet-box h3 {
+  font-size: 25px;
+}
+
+.snippet-box pre {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.snippet-box .language {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+.snippet-box p.metadata {
+  font-size: 12px;
+  color: #888888;
+}
+
+/* Inner Box */
+div.inner-box {
+  flex-grow: 1;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+div.inner-box pre {
+  border: solid 0.5px rgba(0, 0, 0, 0.1);
+}
+
+.center-align {
+  text-align: center;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.language {
+  text-align: right;
+}
+
+
+/* Signup Container */
+#signup {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#signup .card-content {
+  padding: 0;
+}
+
+#signup .card-title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+#signup form {
+  margin-top: 20px;
+}
+
+#signup .input-field {
+  margin-bottom: 20px;
+}
+
+#signup button {
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 25px;
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-left {
+  flex-grow: 1;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 100px;
+  gap: 1in; /* Add the desired spacing between the links */
+}
+
+
+.footer-links a {
+  color: #888888;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.centered {
+  text-align: center;
+}
+
+footer .success-text {
+  font-size: 30px;
+  color: #58AAF2;
+  font-weight: bold;
+
+}

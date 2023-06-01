@@ -1,0 +1,119 @@
+<div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div id="post-feed">
+            <!-- Code Feed Posts -->
+            <div class="row">
+              <div class="col s12 m8">
+                <!-- Code Feed Title -->
+                <div class="card">
+                  <div class="card-content">
+                    <div class="center-align">
+                      <h3 class="feed-title">Code Feed</h3>
+                    </div>
+                  </div>
+                </div>
+                <!-- First Post -->
+                <div class="card">
+                  <div class="card-content">
+                    <p class="language">[JavaScript]</p>
+                    <span class="card-title">Simple JavaScript Hello World</span>
+                    <pre><code>console.log("Hello, World!");</code></pre>
+                    <p class="metadata">Posted by js_coder123 on 2023-05-25</p>
+                  </div>
+                </div>
+                <!-- Second Post -->
+                <div class="card">
+                  <div class="card-content">
+                    <p class="language">[JavaScript]</p>
+                    <span class="card-title">JavaScript Bubble Sort</span>
+                    <pre><code>function bubbleSort(arr) {
+    const n = arr.length;
+    for (let i = 0; i < n - 1; i++) {
+      for (let j = 0; j < n - i - 1; j++) {
+        if (arr[j] > arr[j + 1]) {
+          const temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
+        }
+      }
+    }
+  }</code></pre>
+                    <p class="metadata">Posted by code_ninja on 2023-05-24</p>
+                  </div>
+                </div>
+                <!-- Third Post -->
+                <div class="card">
+                  <div class="card-content">
+                    <p class="language">[HTML]</p>
+                    <span class="card-title">HTML Form Validation</span>
+                    <pre><code>&lt;form&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+    &lt;input type="submit" value="Submit"&gt;
+  &lt;/form&gt;</code></pre>
+                    <p class="metadata">Posted by web_dev_guru on 2023-05-23</p>
+                  </div>
+                </div>
+                <!-- Fourth Post -->
+                <div class="card">
+                  <div class="card-content">
+                    <p class="language">[SQL]</p>
+                    <span class="card-title">SQL Select Statement</span>
+                    <pre><code>SELECT * FROM users WHERE age > 18;</code></pre>
+                    <p class="metadata">Posted by data_query on 2023-05-22</p>
+                  </div>
+                </div>
+                <!-- Fifth Post -->
+                <div class="card">
+                  <div class="card-content">
+                    <p class="language">[CSS]</p>
+                    <span class="card-title">CSS Flexbox Layout</span>
+                    <pre><code>.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .item {
+    flex: 1;
+    margin: 10px;
+  }</code></pre>
+                    <p class="metadata">Posted by style_master on 2023-05-21</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m4 center-align">
+                <div id="signup" class="card">
+                  <div class="card-content">
+                    <span class="card-title">Sign Up</span>
+                    <form>
+                      <div class="input-field">
+                        <input id="name" type="text" name="name" required>
+                        <label for="name">Name</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="username" type="text" name="username" required>
+                        <label for="username">Username</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="email" type="email" name="email" required>
+                        <label for="email">Email</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="password" type="password" name="password" required>
+                        <label for="password">Password</label>
+                      </div>
+                      <button class="btn blue" type="submit">Sign Up</button>
+                    </form>
+                  </div>
+                </div>
+                <div class="terms-box">
+                  <p class="small-font">By clicking “Sign up”, you agree to our terms of service and acknowledge that you have read and understand our privacy policy and code of conduct.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

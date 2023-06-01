@@ -1,5 +1,36 @@
-# Code-Trove
-Code Snippet Manager
+# Code Trove - Code Snippet Manager
+  ![License](https://img.shields.io/badge/License-MIT.svg)
+
+  https://opensource.org/licenses/MIT
+
+
+  ## Table of Contents
+
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Questions](#questions)
+
+
+  ### Description
+  Code Trove is a website that targets an audience of coders of all levels. It provides them with a platform where they can open an account and save important code snippets, boilerplate code, and more, in their profile. They can choose to make their profile private or public, and they can share their snippets with other coders. 
+
+  ### Installation
+  In order for a user to use our project, they have to have VS Code installed. Once they open the project on VS Code, they need to install all the necessary dependencies by typine `npm i`. Then, the user needs to type `npm start`, which will activate their localhost, at which point the website can be accessed online. 
+
+  ### Usage
+    To give coders a platform where they can save code-notes, and share them with other fellow coders. 
+
+### License
+    MIT
+
+  
+### Questions
+g* GitHub: http://github.com/https://github.com/EFP18/Code-Trove
+
+
+
 
 
 # 15 Project 2: Interactive Full-Stack Application

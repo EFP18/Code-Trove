@@ -1,41 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Trove</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <div>
-    <nav>
-      <ul>
-        <a href="/">Code Feed</a>
-        <a href="/profile">My Profile</a>
-        <a href="">Contact Us</a>
-        {{#if loggedIn}}
-        <button id="logout" class="">Logout</button>
-        {{else}}
-        <a href="/login">Login</a>
-        <a href="/signup">Sign Up</a>
-        {{/if}}
-      </ul>
-    </nav>
-    <header>
-      <h1>Welcome to the Code Trove!</h1>
-      <h2>Save your code snippets and get ideas from fellow coders!</h2>
-    </header>
 
-    <main>
-      <h3>Code Feed</h3>
-      <div> 
-        {{{body}}} 
-      </div>
-    </main>
-    <footer>Thank you!</footer>
-    
-    {{#if loggedIn}}
-    <script src = "/js/logout.js"></script>
+<body>
+  <div class="banner">
+    <div class="banner-image"></div>
   </div>
+
+  <nav class="black">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="{{baseUrl}}" class="brand-logo">CODE TROVE</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          {{#if loggedIn}}
+          <li><a href="{{baseUrl}}/home">ABOUT</a></li>
+          <li><a href="{{baseUrl}}/about">CONTACT</a></li>
+          <li><a href="{{baseUrl}}/contact">PROFILE</a></li>
+          <li><a href="{{baseUrl}}/search"><i class="material-icons">search</i></a></li>
+          <li><a href="{{baseUrl}}/login" class="btn blue btn-small">Log Out</a></li>
+          {{else}}
+          <li><a href="{{baseUrl}}/home">HOME</a></li>
+          <li><a href="{{baseUrl}}/about">ABOUT</a></li>
+          <li><a href="{{baseUrl}}/contact">CONTACT</a></li>
+          <li><a href="{{baseUrl}}/search"><i class="material-icons">search</i></a></li>
+          <li><a href="{{baseUrl}}/login" class="btn blue btn-small">Log in</a></li>
+          <li><a href="{{baseUrl}}/signup" class="btn blue btn-small">Sign up</a></li>
+          {{/if}}
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="{{baseUrl}}/home">HOME</a></li>
+          <li><a href="{{baseUrl}}/about">ABOUT</a></li>
+          <li><a href="{{baseUrl}}/contact">CONTACT</a></li>
+          <li><a href="{{baseUrl}}/search"><i class="material-icons">search</i></a></li>
+          <li><a href="{{baseUrl}}/login" class="btn blue btn-small">Log in</a></li>
+          <li><a href="{{baseUrl}}/signup" class="btn blue btn-small">Sign up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    {{{body}}}
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <p class="success-text">We got the code to your success.</p>
+        <p class="sub-text">Transform your code, one snippet at a time.</p>
+        <p class="centered">Copyright &copy; 2023 Code Truve. All Rights Reserved.</p>
+      </div>
+      <div class="footer-right">
+        <a href="{{baseUrl}}/terms">Terms & Conditions</a>
+        <a href="{{baseUrl}}/privacy">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Initialize Side Nav
+      $('.button-collapse').sideNav();
+    });
+  </script>
 </body>
+
 </html>

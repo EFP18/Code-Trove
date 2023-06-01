@@ -1,0 +1,123 @@
+<div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div id="post-feed">
+            <!-- Code Feed Posts -->
+            <div class="row">
+              <div class="col s12 m8">
+                <!-- Code Feed Title -->
+                <div class="card">
+                  <div class="card-content">
+                    <div class="center-align">
+                      <h3 class="feed-title">Code Feed</h3>
+                    </div>
+                  </div>
+                </div>
+                <!-- First Post -->
+                <div class="card">
+                  <div class="card-content">
+                    <p class="language">[JavaScript]</p>
+                    <span class="card-title">Simple JavaScript Hello World</span>
+                    <pre><code>console.log("Hello, World!");</code></pre>
+                    <p class="metadata">Posted by js_coder123 on 2023-05-25</p>
+                  </div>
+                </div>
+                <!-- Second Post -->
+                <div class="card">
+                  <div class="card-content">
+                    <p class="language">[JavaScript]</p>
+                    <span class="card-title">JavaScript Bubble Sort</span>
+                    <pre><code>function bubbleSort(arr) {
+    const n = arr.length;
+    for (let i = 0; i < n - 1; i++) {
+      for (let j = 0; j < n - i - 1; j++) {
+        if (arr[j] > arr[j + 1]) {
+          const temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
+        }
+      }
+    }
+  }</code></pre>
+                    <p class="metadata">Posted by code_ninja on 2023-05-24</p>
+                  </div>
+                </div>
+                <!-- Third Post -->
+                <div class="card">
+                  <div class="card-content">
+                    <p class="language">[HTML]</p>
+                    <span class="card-title">HTML Form Validation</span>
+                    <pre><code>&lt;form&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+    &lt;input type="submit" value="Submit"&gt;
+  &lt;/form&gt;</code></pre>
+                    <p class="metadata">Posted by web_dev_guru on 2023-05-23</p>
+                  </div>
+                </div>
+                <!-- Fourth Post -->
+                <div class="card">
+                  <div class="card-content">
+                    <p class="language">[SQL]</p>
+                    <span class="card-title">SQL Select Statement</span>
+                    <pre><code>SELECT * FROM users WHERE age > 18;</code></pre>
+                    <p class="metadata">Posted by data_query on 2023-05-22</p>
+                  </div>
+                </div>
+                <!-- Fifth Post -->
+                <div class="card">
+                  <div class="card-content">
+                    <p class="language">[CSS]</p>
+                    <span class="card-title">CSS Flexbox Layout</span>
+                    <pre><code>.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .item {
+    flex: 1;
+    margin: 10px;
+  }</code></pre>
+                    <p class="metadata">Posted by style_master on 2023-05-21</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m4 center-align">
+                <div id="create-post" class="card">
+                  <div class="card-content">
+                    <span class="card-title">Create A Post</span>
+                    <form>
+                      <div class="input-field">
+                        <input id="post-title" type="text" name="post-title" required>
+                        <label for="post-title">Title</label>
+                      </div>
+                      <div class="input-field">
+                        <input id="post-language" type="text" name="post-language" required>
+                        <label for="post-language">Language</label>
+                      </div>
+                      <div class="input-field">
+                        <textarea id="post-content" class="materialize-textarea" name="post-content" required></textarea>
+                        <label for="post-content">Content</label>
+                      </div>
+                      <button class="btn blue" type="submit">Create</button>
+                    </form>
+                  </div>
+                </div>
+                <div id="todo-list" class="card">
+                  <div class="card-content">
+                    <span class="card-title">To-Do List</span>
+                    <ul id="task-list" class="collection"></ul>
+                    <div class="input-field">
+                      <input id="new-task" type="text" name="new-task" required>
+                      <label for="new-task">Add Task</label>
+                    </div>
+                    <button id="add-task-btn" class="btn blue" type="button">Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
