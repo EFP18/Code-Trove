@@ -9,7 +9,11 @@ router.get("/", async (req, res) => {
       include: [
         {
           model: User,
+<<<<<<< HEAD
           attributes: ["username"],
+=======
+          attributes: ['username'],
+>>>>>>> 055fa8a597a19d2281abefbe44d9b530de399bb2
         },
       ],
     });
@@ -18,8 +22,12 @@ router.get("/", async (req, res) => {
     const posts = postDb.map((post) => post.get({ plain: true }));
 
     // Pass serialized data and session flag into template
+<<<<<<< HEAD
     // TODO: change posts placeholder to actual feed
     res.render("posts", {
+=======
+    res.render('feed', {
+>>>>>>> 055fa8a597a19d2281abefbe44d9b530de399bb2
       posts,
     });
   } catch (err) {
@@ -39,7 +47,11 @@ router.get("/profile/:id", withAuth, async (req, res) => {
       include: [
         {
           model: User,
+<<<<<<< HEAD
           attributes: ["username"],
+=======
+          attributes: ['username'],
+>>>>>>> 055fa8a597a19d2281abefbe44d9b530de399bb2
         },
       ],
     });
@@ -51,6 +63,7 @@ router.get("/profile/:id", withAuth, async (req, res) => {
       // Pass serialized data and session flag into template
       res.render("profile", {
         post,
+        // loggedIn: req.session.loggedIn
       });
     } else {
       res.status(404).end();
@@ -70,10 +83,17 @@ router.get("/login", (req, res) => {
     res.redirect("/");
     return;
   }
+<<<<<<< HEAD
   res.render("login");
 });
 
 router.get("/signup", (req, res) => {
+=======
+  res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+>>>>>>> 055fa8a597a19d2281abefbe44d9b530de399bb2
   if (req.session.loggedIn) {
     res.redirect("/");
     return;
