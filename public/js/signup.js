@@ -15,6 +15,7 @@ const signupForm = async (event) => {
 
     if (response.ok) {
       document.location.replace('/profile');
+      alert('Success! You have successfully signed up!');
     } else {
       alert('Failed to sign up.');
     }
@@ -24,6 +25,4 @@ const signupForm = async (event) => {
   }
 };
 
-document
-  .querySelector('#signup-form')
-  .addEventListener('submit', signupForm);
+document.querySelector('#signup-form').addEventListener('submit', signupForm);
