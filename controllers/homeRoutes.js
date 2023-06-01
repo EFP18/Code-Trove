@@ -1,8 +1,8 @@
-const router = require("express").Router();
-const { User, Post, Category } = require("../models");
-const withAuth = require("../middleware/auth");
+const router = require('express').Router();
+const { User, Post, Category } = require('../models');
+const withAuth = require('../middleware/auth');
 
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     // GET all posts and JOIN with user
     const postDb = await Post.findAll({
@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
 
     // Pass serialized data and session flag into template
     // TODO: change posts placeholder to actual feed
-    res.render("posts", {
+    res.render('posts', {
       posts,
     });
   } catch (err) {
@@ -29,7 +29,7 @@ router.get("/", async (req, res) => {
 
 // GET all posts of a specific user
 // use middleware to check if the user is logged in
-router.get("/profile/:id", withAuth, async (req, res) => {
+router.get('/profile/:id', withAuth, async (req, res) => {
   try {
     // GET all posts and JOIN with user
     const postDb = await Post.findAll({
@@ -49,7 +49,7 @@ router.get("/profile/:id", withAuth, async (req, res) => {
       const post = postDb.map((post) => post.get({ plain: true }));
 
       // Pass serialized data and session flag into template
-      res.render("profile", {
+      res.render('profile', {
         post,
         // loggedIn: req.session.loggedIn
       });
@@ -61,14 +61,14 @@ router.get("/profile/:id", withAuth, async (req, res) => {
   }
 });
 
-router.get("/profile", (req, res) => {
-  res.render("profile");
+router.get('/profile', (req, res) => {
+  res.render('profile');
 });
 
-router.get("/login", (req, res) => {
+router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect('/');
     return;
   }
   res.render('login');
@@ -76,10 +76,10 @@ router.get("/login", (req, res) => {
 
 router.get('/signup', (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect('/');
     return;
   }
 
-  res.render("signup");
+  res.render('signup');
 });
 module.exports = router;
