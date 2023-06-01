@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const { validateEmail } = require('../../utils/routeHelpers');
 
 router.post('/', async (req, res) => {
     try {
@@ -19,7 +20,17 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     try {
-        const userData = await User.findOne({ where: { email: req.body.email } });
+        const isEmail = validateEmail(req.body.email_or_username);
+
+        const queryOptionsObj = {};
+        
+        if (isEmail) {
+            queryOptionsObj.where.email = req.body.email_or_username
+        } else {
+            queryOptionsObj.where.username = req.body.email_or_username
+        }
+
+        const userData = await User.findOne(queryOptionsObj);
 
         if (!userData) {
             res
