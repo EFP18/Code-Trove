@@ -51,6 +51,7 @@ router.get('/profile/:id', withAuth, async (req, res) => {
       // Pass serialized data and session flag into template
       res.render('profile', {
         post,
+        pageName: 'Profile - Code Trove',
         // loggedIn: req.session.loggedIn
       });
     } else {
@@ -61,17 +62,15 @@ router.get('/profile/:id', withAuth, async (req, res) => {
   }
 });
 
-router.get('/profile', (req, res) => {
-  res.render('profile');
-});
-
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
   }
-  res.render('login');
+  res.render('login', {
+    pageName: 'Login - Code Trove',
+  });
 });
 
 router.get('/signup', (req, res) => {
@@ -80,6 +79,8 @@ router.get('/signup', (req, res) => {
     return;
   }
 
-  res.render('signup');
+  res.render('signup', {
+    pageName: 'Sign Up! - Code Trove',
+  });
 });
 module.exports = router;

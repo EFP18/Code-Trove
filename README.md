@@ -4,7 +4,7 @@
   https://opensource.org/licenses/MIT
 
 
-  ## Table of Contents
+## Table of Contents
 
   * [Description](#description)
   * [Installation](#installation)
@@ -13,63 +13,34 @@
   * [Questions](#questions)
 
 
-  ### Description
+### Description
   Code Trove is a website that targets an audience of coders of all levels. It provides them with a platform where they can open an account and save important code snippets, boilerplate code, and more, in their profile. They can choose to make their profile private or public, and they can share their snippets with other coders. 
 
-  ### Installation
-  In order for a user to use our project, they have to have VS Code installed. Once they open the project on VS Code, they need to install all the necessary dependencies by typine `npm i`. Then, the user needs to type `npm start`, which will activate their localhost, at which point the website can be accessed online. 
+### Installation
+  In order for a user to run our project locally, they need to have VS Code installed. Once they open the project on VS Code, they need to install all the necessary dependencies by typing `npm i`. Then, the user needs to type `npm start`, which will activate their localhost, at which point the website can be accessed online. 
 
-  ### Usage
-    To give coders a platform where they can save code-notes, and share them with other fellow coders. 
+  The project is deployed using `Heroku`, so anybody can access the website through the link mentioned above. 
+
+### Technologies Used
+* `Node.js` and `Express.js` - Create RESTful API. 
+* `Handlebars.js` as template engine.
+* MySQL and Sequelize ORM. 
+* This project follows an MVC paradigm. 
+* Environment variables to protect API keys and sensitive information.
+* `Extra library`.
+
+### Usage
+  To give coders a platform where they can save code-notes, and share them with other fellow coders. 
 
 ### License
-    MIT
+  MIT
 
-  
 ### Questions
-g* GitHub: http://github.com/https://github.com/EFP18/Code-Trove
+* GitHub: http://github.com/https://github.com/EFP18/Code-Trove
 
 
 
 
-
-# 15 Project 2: Interactive Full-Stack Application
-
-Projects play a key role in your journey to becoming a full-stack web developer. As you enter the last phase of the boot camp, you’ll begin to apply for development jobs. If you want to land interviews, your portfolio must feature high-quality deployed examples of your work—-and you can use your finished projects for that very purpose.
-
-As your first opportunity to show employers your collaborative skills and coding abilities, this particular project will be a focal point of your portfolio. Employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
-
-## Project Requirements
-
-You and your group will use everything you’ve learned over the past six modules to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
-
-* Use Node.js and Express.js to create a RESTful API.
-
-* Use Handlebars.js as the template engine.
-
-* Use MySQL and the Sequelize ORM for the database.
-
-* Have both GET and POST routes for retrieving and adding new data.
-
-* Use at least one new library, package, or technology that we haven’t discussed.
-
-* Have a folder structure that meets the MVC paradigm.
-
-* Include authentication (express-session and cookies).
-
-* Protect API keys and sensitive information with environment variables.
-
-* Be deployed using Heroku (with data).
-
-* Have a polished UI.
-
-* Be responsive.
-
-* Be interactive (i.e., accept and respond to user input).
-
-* Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
-
-* Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
 ## Presentation Requirements
 
@@ -87,29 +58,8 @@ Use this [project presentation template](https://docs.google.com/presentation/d/
 
 * Links to the deployed application and the GitHub repository. Use the [Guide to Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql) on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
 
-## Grading Requirements
 
-This project is graded based on the following criteria:
 
-### Technical Acceptance Criteria: 25%
-
-* Satisfies the following code requirements:
-
-  * Application uses a Node.js and Express.js back end and uses both GET and POST routes for retrieving and adding new data.
-
-  * Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.
-
-  * Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables.
-
-  * Application includes user authentication (express-session and cookies).
-
-  * Application uses at least one new library, package, or technology not covered in class.
-
-### Concept 10%
-
-* Application should be a unique and novel idea.
-
-* Your group should clearly and concisely articulate your project idea.
 
 ### Deployment: 20%
 
@@ -145,9 +95,8 @@ This project is graded based on the following criteria:
 
 * Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
 
-### Collaboration 10%
 
-* There are no major disparities in the number of GitHub contributions between group members.
+
 
 ## How to Submit Your Interactive Full-Stack Project
 
@@ -157,5 +106,3 @@ This project is graded based on the following criteria:
 
 * The URL of the GitHub repository, with a unique name and a README describing the project.
 
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

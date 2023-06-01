@@ -4,16 +4,18 @@ const withAuth = require('../../utils/auth')
 
 // Creates a post
 router.post('/', withAuth, (req, res) => {
+    const body = req.body;
+
     Post.create({
-        title: req.body.title,
-        body: req.body.body,
-        user_id: req.body.user_id
+        title: body.title,
+        body: body.body,
+        user_id: body.user_id
     })
     .then((newPost) => {
         res.json(newPost);
     })
     .catch((err) => {
-        res.json(err);
+        res.status(500).json(err);
     });
 });
 
@@ -53,7 +55,9 @@ router.put('/:id', withAuth, (req, res) => {
         .then((updatedPost) => {
             res.json(updatedPost);
         })
-        .catch((err) => res.json(err));
+        .catch((err) => {
+            res.status(500).json(err);
+        });
 });
 
 // Delete a post
@@ -66,7 +70,9 @@ router.delete('/:id', withAuth, (req, res) => {
         .then((deletedPost) => {
             res.json(deletedPost);
         })
-        .catch((err) => res.json(err));
+        .catch((err) => {
+            res.status(500).json(err);
+        });
 });
 
 module.exports = router;

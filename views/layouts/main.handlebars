@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{#if pageName}}
+    <title>{{pageName}}</title>
+    {{else}}
     <title>Code Trove</title>
+    {{/if}}
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -36,17 +40,16 @@
             >menu</i></a>
           <ul class="right hide-on-med-and-down">
             {{#if loggedIn}}
-              <li><a href="{{baseUrl}}/home">ABOUT</a></li>
-              <li><a href="{{baseUrl}}/about">CONTACT</a></li>
+              <li><a href="{{baseUrl}}/">HOME</a></li>
+              <li><a href="{{baseUrl}}/about">ABOUT</a></li>
               <li><a href="{{baseUrl}}/contact">PROFILE</a></li>
               <li><a href="{{baseUrl}}/search"><i
                     class="material-icons"
                   >search</i></a></li>
               <li><a href="{{baseUrl}}/login" class="btn blue btn-small">Log Out</a></li>
             {{else}}
-              <li><a href="{{baseUrl}}/home">HOME</a></li>
+              <li><a href="{{baseUrl}}/">HOME</a></li>
               <li><a href="{{baseUrl}}/about">ABOUT</a></li>
-              <li><a href="{{baseUrl}}/contact">CONTACT</a></li>
               <li><a href="{{baseUrl}}/search"><i
                     class="material-icons"
                   >search</i></a></li>
@@ -56,9 +59,8 @@
             {{/if}}
           </ul>
           <ul class="side-nav" id="mobile-demo">
-            <li><a href="{{baseUrl}}/home">HOME</a></li>
+            <li><a href="{{baseUrl}}/">HOME</a></li>
             <li><a href="{{baseUrl}}/about">ABOUT</a></li>
-            <li><a href="{{baseUrl}}/contact">CONTACT</a></li>
             <li><a href="{{baseUrl}}/search"><i
                   class="material-icons"
                 >search</i></a></li>
