@@ -9,9 +9,9 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username']
-        }
-      ]
+          attributes: ['username'],
+        },
+      ],
     });
 
     // Serialize data so the template can read it
@@ -19,13 +19,12 @@ router.get('/', async (req, res) => {
 
     // Pass serialized data and session flag into template
     res.render('feed', {
-      posts
-    })
-  } catch(err) {
+      posts,
+    });
+  } catch (err) {
     res.status(500).json(err);
   }
 });
-
 
 // GET all posts of a specific user
 // use middleware to check if the user is logged in
@@ -34,30 +33,29 @@ router.get('/profile/:id', withAuth, async (req, res) => {
     // GET all posts and JOIN with user
     const postDb = await Post.findAll({
       where: {
-        id: req.params.id
+        id: req.params.id,
       },
       include: [
         {
           model: User,
-          attributes: ['username']
-        }
-      ]
+          attributes: ['username'],
+        },
+      ],
     });
 
-    if (postDb){
-
+    if (postDb) {
       // Serialize data so the template can read it
       const post = postDb.map((post) => post.get({ plain: true }));
-  
+
       // Pass serialized data and session flag into template
       res.render('profile', {
         post,
+        // loggedIn: req.session.loggedIn
       });
-
     } else {
       res.status(404).end();
     }
-  } catch(err) {
+  } catch (err) {
     res.status(500).json(err);
   }
 });
@@ -73,9 +71,8 @@ router.get('/login', (req, res) => {
     res.redirect('/');
     return;
   }
-  res.render('login')
+  res.render('login');
 });
-
 
 router.get('/signup', (req, res) => {
   if (req.session.loggedIn) {
