@@ -54,6 +54,8 @@ router.get('/profile/:id', withAuth, async (req, res) => {
       ],
     });
 
+    console.log(postDb);
+
     if (postDb) {
       // Serialize data so the template can read it
       const post = postDb.map((post) => post.get({ plain: true }));
@@ -62,7 +64,7 @@ router.get('/profile/:id', withAuth, async (req, res) => {
       res.render('profile', {
         post,
         pageName: 'Profile - Code Trove',
-        // loggedIn: req.session.loggedIn
+        loggedIn: true,
       });
     } else {
       res.status(404).end();
