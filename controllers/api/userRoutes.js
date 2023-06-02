@@ -22,15 +22,23 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const isEmail = validateEmail(req.body.email_or_username);
+    console.log('\n --------login-------- \n')
 
-    const queryOptionsObj = {};
+    const isEmail = validateEmail(req.body.email_or_username);
+    console.log(isEmail);
+    const queryOptionsObj = {
+      where: {}
+    };
 
     if (isEmail) {
       queryOptionsObj.where.email = req.body.email_or_username;
     } else {
       queryOptionsObj.where.username = req.body.email_or_username;
     }
+
+    console.log(queryOptionsObj);
+
+    console.log('\n -------before-------\n')
 
     const userData = await User.findOne(queryOptionsObj);
 
