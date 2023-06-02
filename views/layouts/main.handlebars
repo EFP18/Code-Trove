@@ -25,21 +25,15 @@
       rel="stylesheet"
     />
   </head>
-
-  <body>
-    <div class="banner">
-      <div class="banner-image"></div>
-    </div>
-
     <nav class="black">
       <div class="container">
         <div class="nav-wrapper">
-          <a href="{{baseUrl}}" class="brand-logo">CODE TROVE</a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i
-              class="material-icons"
-            >menu</i></a>
+          <a href="{{baseUrl}}" class="title">CODE TROVE</a>
+          <a href="{{baseUrl}}" data-activates="side-nav" class="button-collapse show-on-large right">
+            <i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             {{#if loggedIn}}
+              <li class="active">
               <li><a href="{{baseUrl}}/">HOME</a></li>
               <li><a href="{{baseUrl}}/about">ABOUT</a></li>
               <li><a href="{{baseUrl}}/contact">PROFILE</a></li>
@@ -56,9 +50,9 @@
               <li><a href="{{baseUrl}}/login" class="btn blue btn-small">Log in</a></li>
               <li><a href="{{baseUrl}}/signup" class="btn blue btn-small">Sign
                   up</a></li>
-            {{/if}}
           </ul>
-          <ul class="side-nav" id="mobile-demo">
+            {{/if}}
+          <ul id="side-nav" class="side-nav">
             <li><a href="{{baseUrl}}/">HOME</a></li>
             <li><a href="{{baseUrl}}/about">ABOUT</a></li>
             <li><a href="{{baseUrl}}/search"><i
@@ -97,7 +91,8 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
       $(document).ready(function () { // Initialize Side Nav
-      $('.button-collapse').sideNav(); });
+      $('.button-collapse').sideNav(); 
+      });
     </script>
   </body>
 
