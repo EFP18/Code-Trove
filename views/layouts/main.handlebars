@@ -42,7 +42,8 @@
             {{#if loggedIn}}
               <li><a href='{{baseUrl}}/'>HOME</a></li>
               <li><a href='{{baseUrl}}/about'>ABOUT</a></li>
-              <li><a href='{{baseUrl}}/profile/'>PROFILE</a></li>
+              {{!-- TODO: add id on profile link --}}
+              <li><a href='{{baseUrl}}/profile/:id'>PROFILE</a></li>
               <li><a href='{{baseUrl}}/search'><i
                     class='material-icons'
                   >search</i></a></li>

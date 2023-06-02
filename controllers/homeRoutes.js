@@ -54,6 +54,8 @@ router.get('/profile/:id', withAuth, async (req, res) => {
       ],
     });
 
+    // TODO: it's not connecting the post with the user correctly
+
     console.log(postDb);
 
     if (postDb) {
