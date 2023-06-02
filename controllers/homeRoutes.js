@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 
     // Pass serialized data and session flag into template
     // TODO: change posts placeholder to actual feed
-    res.render('posts', {
+    res.render('feed', {
       posts,
     });
   } catch (err) {
