@@ -1,7 +1,7 @@
 const { Category } = require('../../models');
 
 const router = require('express').Router();
-const { Category, Post, User, PostCategory } = require('../../models');
+const { Post, User, PostCategory } = require('../../models');
 
 router.get('/', async (req, res) => {
   try {
@@ -60,3 +60,5 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+module.exports = Category;

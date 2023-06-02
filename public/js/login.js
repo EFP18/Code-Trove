@@ -16,7 +16,7 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
   removeAllErrors();
 
-  const emailOrUsername = document.querySelector('#email').value.trim();
+  const emailOrUsername = document.querySelector('#login_id').value.trim();
   const password = document.querySelector('#password').value.trim();
 
   if (!emailOrUsername || !password) {
@@ -47,7 +47,11 @@ const loginFormHandler = async (event) => {
       return;
     }
 
-    document.location.replace('/profile');
+    const res = await response.json();
+
+    console.log(res);
+
+    document.location.replace(`/profile/${res.user.id}`);
   } catch (err) {
     console.log(err);
     showError(loginFormEl, 'A login error has ocurred');
