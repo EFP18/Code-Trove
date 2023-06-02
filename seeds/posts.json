@@ -1,0 +1,38 @@
+[
+    {
+        "title": "JavaScript Bubble Sort",
+        "Body": "function bubbleSort(arr) { \n const n = arr.length; \n for (let i = 0; i < n - 1; i++) { \n for (let j = 0; j < n - i - 1; j++) { \n if (arr[j] > arr[j + 1]) { \n     const temp = arr[j]; \n arr[j] = arr[j + 1]; \n arr[j + 1] = temp; \n } \n } \n } \n }",
+        "Category": "JavaScript",
+        "Created by/Date": "Posted by code_ninja on 2023-05-24"
+    },
+    {
+        "title": "Simple JavaScript Hello World",
+        "Body": "console.log('Hello, World!');",
+        "Category": "JavaScript",
+        "Created by/Date": "Posted by js_coder123 on 2023-05-25"
+    },
+    {
+        "title": "HTML Form Validation",
+        "Body": "&lt;form&gt; \n &lt;label for='name'&gt;Name:&lt;/label&gt; \n &lt;input type='text' id='name' name='name' required&gt; \n &lt;input type='submit' value='Submit'&gt; \n &lt;/form&gt;",
+        "Category": "HTML",
+        "Created by/Date": "Posted by web_dev_guru on 2023-05-23"
+    },
+    {
+        "title": "SQL Select Statement",
+        "Body": "SELECT * FROM users WHERE age > 18;",
+        "Category": "SQL",
+        "Created by/Date": "Posted by data_query on 2023-05-22"
+    },
+    {
+        "title": "CSS Flexbox Layout",
+        "Body": ".container { \n display: flex; \n justify-content: center; \n align-items: center; \n } \n \n .items { \n flex: 1; \n margin: 10px; \n }",
+        "Category": "CSS",
+        "Created by/Date": "Posted by style_master on 2023-05-21"
+    },
+    {
+        "title": "",
+        "Body": "",
+        "Category": "",
+        "Created by/Date": ""
+    }
+]
