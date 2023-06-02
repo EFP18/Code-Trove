@@ -12,11 +12,10 @@ const signupForm = async (event) => {
       headers: { 'Content-Type': 'application/json' },
     });
 
-    const data = await response.json();
-
     if (response.ok) {
-      document.location.replace('/profile');
-      alert('Success! You have successfully signed up!');
+      const data = await response.json();
+      console.log(data);
+      document.location.replace(`/profile/${data.id}`);
     } else {
       alert('Failed to sign up.');
     }

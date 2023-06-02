@@ -1,71 +1,71 @@
-<html lang="en">
+<html lang='en'>
 
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     {{#if pageName}}
-    <title>{{pageName}}</title>
+      <title>{{pageName}}</title>
     {{else}}
-    <title>Code Trove</title>
+      <title>Code Trove</title>
     {{/if}}
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
+      href='https://fonts.googleapis.com/icon?family=Material+Icons'
+      rel='stylesheet'
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel='stylesheet' href='/css/styles.css' />
     <link
-      type="text/css"
-      rel="stylesheet"
-      href="css/materialize.min.css"
-      media="screen,projection"
+      type='text/css'
+      rel='stylesheet'
+      href='/css/materialize.min.css'
+      media='screen,projection'
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;700&display=swap"
-      rel="stylesheet"
+      href='https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;700&display=swap'
+      rel='stylesheet'
     />
   </head>
 
   <body>
-    <div class="banner">
-      <div class="banner-image"></div>
+    <div class='banner'>
+      <div class='banner-image'></div>
     </div>
 
-    <nav class="black">
-      <div class="container">
-        <div class="nav-wrapper">
-          <a href="{{baseUrl}}" class="brand-logo">CODE TROVE</a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i
-              class="material-icons"
+    <nav class='black'>
+      <div class='container'>
+        <div class='nav-wrapper'>
+          <a href='{{baseUrl}}' class='brand-logo'>CODE TROVE</a>
+          <a href='#' data-activates='mobile-demo' class='button-collapse'><i
+              class='material-icons'
             >menu</i></a>
-          <ul class="right hide-on-med-and-down">
+          <ul class='right hide-on-med-and-down'>
             {{#if loggedIn}}
-              <li><a href="{{baseUrl}}/">HOME</a></li>
-              <li><a href="{{baseUrl}}/about">ABOUT</a></li>
-              <li><a href="{{baseUrl}}/contact">PROFILE</a></li>
-              <li><a href="{{baseUrl}}/search"><i
-                    class="material-icons"
+              <li><a href='{{baseUrl}}/'>HOME</a></li>
+              <li><a href='{{baseUrl}}/about'>ABOUT</a></li>
+              <li><a href='{{baseUrl}}/profile/'>PROFILE</a></li>
+              <li><a href='{{baseUrl}}/search'><i
+                    class='material-icons'
                   >search</i></a></li>
-              <li><a href="{{baseUrl}}/login" class="btn blue btn-small">Log Out</a></li>
+              <li><a href='{{baseUrl}}/login' class='btn blue btn-small'>Log Out</a></li>
             {{else}}
-              <li><a href="{{baseUrl}}/">HOME</a></li>
-              <li><a href="{{baseUrl}}/about">ABOUT</a></li>
-              <li><a href="{{baseUrl}}/search"><i
-                    class="material-icons"
+              <li><a href='{{baseUrl}}/'>HOME</a></li>
+              <li><a href='{{baseUrl}}/about'>ABOUT</a></li>
+              <li><a href='{{baseUrl}}/search'><i
+                    class='material-icons'
                   >search</i></a></li>
-              <li><a href="{{baseUrl}}/login" class="btn blue btn-small">Log in</a></li>
-              <li><a href="{{baseUrl}}/signup" class="btn blue btn-small">Sign
+              <li><a href='{{baseUrl}}/login' class='btn blue btn-small'>Log in</a></li>
+              <li><a href='{{baseUrl}}/signup' class='btn blue btn-small'>Sign
                   up</a></li>
             {{/if}}
           </ul>
-          <ul class="side-nav" id="mobile-demo">
-            <li><a href="{{baseUrl}}/">HOME</a></li>
-            <li><a href="{{baseUrl}}/about">ABOUT</a></li>
-            <li><a href="{{baseUrl}}/search"><i
-                  class="material-icons"
+          <ul class='side-nav' id='mobile-demo'>
+            <li><a href='{{baseUrl}}/'>HOME</a></li>
+            <li><a href='{{baseUrl}}/about'>ABOUT</a></li>
+            <li><a href='{{baseUrl}}/search'><i
+                  class='material-icons'
                 >search</i></a></li>
-            <li><a href="{{baseUrl}}/login" class="btn blue btn-small">Log in</a></li>
-            <li><a href="{{baseUrl}}/signup" class="btn blue btn-small">Sign up</a></li>
+            <li><a href='{{baseUrl}}/login' class='btn blue btn-small'>Log in</a></li>
+            <li><a href='{{baseUrl}}/signup' class='btn blue btn-small'>Sign up</a></li>
           </ul>
         </div>
       </div>
@@ -76,25 +76,25 @@
     </main>
 
     <footer>
-      <div class="footer-content">
-        <div class="footer-left">
-          <p class="success-text">We got the code to your success.</p>
-          <p class="sub-text">Transform your code, one snippet at a time.</p>
-          <p class="centered"> &copy; 2023 Code Trove. All Rights Reserved.</p>
+      <div class='footer-content'>
+        <div class='footer-left'>
+          <p class='success-text'>We got the code to your success.</p>
+          <p class='sub-text'>Transform your code, one snippet at a time.</p>
+          <p class='centered'> &copy; 2023 Code Trove. All Rights Reserved.</p>
         </div>
-        <div class="footer-middle">
-          <a href="{{baseUrl}}/terms">Terms & Conditions</a>
-          <a href="{{baseUrl}}/privacy">Privacy Policy</a>
+        <div class='footer-middle'>
+          <a href='{{baseUrl}}/terms'>Terms & Conditions</a>
+          <a href='{{baseUrl}}/privacy'>Privacy Policy</a>
         </div>
       </div>
     </footer>
 
     <!--Import jQuery before materialize.js-->
     <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      type='text/javascript'
+      src='https://code.jquery.com/jquery-3.2.1.min.js'
     ></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type='text/javascript' src='js/materialize.min.js'></script>
     <script>
       $(document).ready(function () { // Initialize Side Nav
       $('.button-collapse').sideNav(); });
