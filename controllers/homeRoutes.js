@@ -32,8 +32,7 @@ router.get('/about', async (req, res) => {
     res.render('about', {
       pageName: 'About - Code Trove',
     });
-
-  } catch(err) {
+  } catch (err) {
     res.status(500).json(err);
   }
 });
