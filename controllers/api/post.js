@@ -19,25 +19,25 @@ router.post('/', withAuth, (req, res) => {
     });
 });
 
-// Get all posts
-router.get('/', (req, res) => {
-    Post.findAll().then((postData) => {
-        res.json(postData);
-    });
-})
+// // Get all posts
+// router.get('/', (req, res) => {
+//     Post.findAll().then((postData) => {
+//         res.json(postData);
+//     });
+// })
 
-// Get single post
-router.get('/:id', (req, res) => {
-    Post.findOne(
-        {
-            where: {
-                id: req.params.id
-            },
-        }
-    ).then((postData) => {
-        res.json(postData);
-    });
-});
+// // Get single post
+// router.get('/:id', (req, res) => {
+//     Post.findOne(
+//         {
+//             where: {
+//                 id: req.params.id
+//             },
+//         }
+//     ).then((postData) => {
+//         res.json(postData);
+//     });
+// });
 
 // Updates a post
 router.put('/:id', withAuth, (req, res) => {
