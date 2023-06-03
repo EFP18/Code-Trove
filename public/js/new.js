@@ -17,7 +17,6 @@ const newFormHandler = async function (event) {
 
   console.log('post created')
   const data = await response.json();
-  // TODO: add profile id
   document.location.replace(`/profile`);
 };
 

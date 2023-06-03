@@ -19,9 +19,6 @@ const signupForm = async (event) => {
     } else {
       alert('Failed to sign up.');
     }
-
-    // emailInput.value = '';
-    // passwordInput.value = '';
   }
 };
 

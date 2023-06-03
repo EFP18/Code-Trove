@@ -20,7 +20,6 @@ router.get('/', async (req, res) => {
     // console.log(posts);
 
     // Pass serialized data and session flag into template
-    // TODO: change posts placeholder to actual feed
     res.render('feed', {
       posts,
       loggedIn: Boolean(req.session.user_id)
@@ -34,6 +33,7 @@ router.get('/about', async (req, res) => {
   try {
     res.render('about', {
       pageName: 'About - Code Trove',
+      loggedIn: Boolean(req.session.user_id)
     });
   } catch (err) {
     res.status(500).json(err);
@@ -56,8 +56,6 @@ router.get('/profile', withAuth, async (req, res) => {
         },
       ],
     });
-
-    // TODO: it's not connecting the post with the user correctly
 
     console.log(postDb);
 
