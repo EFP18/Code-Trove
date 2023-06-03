@@ -51,7 +51,7 @@ const loginFormHandler = async (event) => {
 
     console.log(res);
 
-    document.location.replace(`/profile/${res.user.id}`);
+    document.location.replace(`/profile`);
   } catch (err) {
     console.log(err);
     showError(loginFormEl, 'A login error has ocurred');

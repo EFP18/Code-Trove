@@ -15,7 +15,7 @@ const signupForm = async (event) => {
     if (response.ok) {
       const data = await response.json();
       console.log(data);
-      document.location.replace(`/profile/${data.id}`);
+      document.location.replace(`/profile`);
     } else {
       alert('Failed to sign up.');
     }

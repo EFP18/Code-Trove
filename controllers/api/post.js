@@ -6,10 +6,12 @@ const withAuth = require('../../middleware/auth')
 router.post('/', withAuth, (req, res) => {
     const body = req.body;
 
+    console.log(body);
+
     Post.create({
         title: body.title,
         body: body.body,
-        user_id: body.user_id
+        user_id: req.session.user_id
     })
     .then((newPost) => {
         res.json(newPost);
