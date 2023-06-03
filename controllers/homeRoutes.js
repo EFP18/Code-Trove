@@ -17,6 +17,8 @@ router.get('/', async (req, res) => {
     // Serialize data so the template can read it
     const posts = postDb.map((post) => post.get({ plain: true }));
 
+    // console.log(posts);
+
     // Pass serialized data and session flag into template
     // TODO: change posts placeholder to actual feed
     res.render('feed', {

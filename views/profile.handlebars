@@ -150,10 +150,10 @@
             <div class="card">
               <div class="card-content">
                 {{#each post}}
-                  <p class="language">[JavaScript]</p>
+                  {{!-- <p class="language">{{category}}</p> --}}
                   <span class="card-title">{{this.title}}</span>
                   <pre><code>{{this.body}}</code></pre>
-                  <p class="metadata">{{created_At}}</p>
+                  <p class="metadata">Create at: {{format_date createdAt}}</p>
                   <div class="card-action">
                     <a href="#">Like</a>
                     <a href="#">Save</a>
