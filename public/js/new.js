@@ -5,9 +5,9 @@ const newFormHandler = async function (event) {
   const category = document
     .querySelector('input[name="post-language"]')
     .value.trim();
-  const body = document.querySelector('input[name="post-content"]').value;
+  const body = document.querySelector('textarea[name="post-content"]').value;
 
-  await fetch(`/api/post`, {
+  var res = await fetch(`/api/post`, {
     method: 'POST',
     body: JSON.stringify({
       title,
@@ -16,9 +16,11 @@ const newFormHandler = async function (event) {
     }),
     headers: { 'Content-Type': 'application/json' },
   });
+  var data = await res.json();
+  //debugger;
 
   // TODO: add profile id
-  document.location.replace('/profile');
+  document.location.replace(`/profile/${data.user_id}`);
 };
 
 document

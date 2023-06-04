@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 
     // Pass serialized data and session flag into template
     // TODO: change posts placeholder to actual feed
-    res.render('posts', {
+    res.render('profile', {
       posts,
     });
   } catch (err) {
@@ -58,11 +58,11 @@ router.get('/profile/:id', withAuth, async (req, res) => {
 
     if (postDb) {
       // Serialize data so the template can read it
-      const post = postDb.map((post) => post.get({ plain: true }));
+      const posts = postDb.map((post) => post.get({ plain: true }));
 
       // Pass serialized data and session flag into template
       res.render('profile', {
-        post,
+        posts,
         pageName: 'Profile - Code Trove',
         loggedIn: true,
       });
