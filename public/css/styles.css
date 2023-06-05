@@ -1,36 +1,14 @@
-/* Navigation */
+Navigation
 nav {
   position: relative;
   z-index: 1;
 }
 
-/* Banner
-.banner {
-  position: relative;
-  width: 100%;
-  height: 425px;
-  overflow: hidden;
-  margin-bottom: 20px;
-  z-index: 1;
-}
-
-.banner-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://cdn.wallpapersafari.com/9/59/ZcVzSn.jpeg");
-  background-size: cover;
-  background-position: top;
-  transform-origin: left top;
-  transform: skewY(-5deg);
-  z-index: 1; 
-} */
-
 body {
-  /* background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
-  background-image: url("../img/609.jpg");
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url("../img/background.jpg");
   background-size: cover;
   background-position: bottom;
   font-family: "Saira Condensed", sans-serif;
@@ -111,7 +89,7 @@ div.inner-box pre {
 
 .center-align {
   text-align: center;
-  margin-bottom: 20px; /* Adjust the margin as needed */
+  margin-bottom: 20px; 
 }
 
 .language {
@@ -126,9 +104,9 @@ div.inner-box pre {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#signup .card-content {
+/* #signup .card-content {
   padding: 0;
-}
+} */
 
 #signup .card-title {
   font-size: 25px;
@@ -147,35 +125,59 @@ div.inner-box pre {
   margin-top: 20px;
 }
 
+/* Login Container */
+#login {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/* #login .card-content {
+  padding: 0;
+} */
+
+#login .card-title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+#login form {
+  margin-top: 20px;
+}
+
+#login .input-field {
+  margin-bottom: 20px;
+}
+
+#login button {
+  margin-top: 20px;
+}
+
 /* Footer */
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
   flex-direction: column;
-  padding: 0 25px;
+  justify-content: space-between;
+  padding: 20px;
   background-color: #000;
   color: #fff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: auto;
 }
 
-.footer-content {
+.footer-top {
+  margin-bottom: 20px;
+}
+
+.footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
-.footer-left {
-  flex-grow: 1;
-}
-
-.footer-right {
+.footer-links {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 100px;
-  gap: 1in; /* Add the desired spacing between the links */
+  gap: 20px;
 }
 
 .footer-links a {
@@ -187,12 +189,24 @@ footer {
   text-decoration: underline;
 }
 
-.centered {
+.copy {
   text-align: center;
+  margin-right: -10%;
 }
 
 footer .success-text {
   font-size: 30px;
   color: #58aaf2;
   font-weight: bold;
+}
+
+/* @media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+  }
+} */
+@media screen and (max-width: 768px) {
+  footer {
+    display: none !important;
+  }
 }
