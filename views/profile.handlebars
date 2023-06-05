@@ -1,47 +1,80 @@
-{{!-- rendering all posts for the profile page based on user id --}}
+{{! rendering all posts for the profile page based on user id }}
 
-{{!-- <div class="container"> --}}
-<div class="row">
-  <div class="col s12 m4 l2"></div>
-  <div class="col s12 m4 l8">
-    {{#each post}}
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-            <p class="language">{{this.language}}</p>
-            <span class="card-title">{{this.title}}</span>
-            <pre><code>{{this.body}}</code></pre>
-            <p class="metadata">Created at: {{format_date createdAt}}</p>
-            <div class="card-action">
-              <a href="#">Like</a>
-              <a href="#">Save</a>
-            </div>
-        </div>
-      </div>
-    {{/each}} 
+{{! <div class="container"> }}
+<div class='row'>
+  <div class='col s12 m10 offset-m1 l8 offset-l2 flex createPostRow'>
+    {{! <div class="card-panel center"> }}
+    {{! <div class="col s12 m4 l2"></div>
+  <div class="col s12 m4 l8"> }}
 
-{{!-- form to add a new post --}}
-    <div id="create-post" class="card">
-      <div class="card-content">
-        <span class="card-title">Create A Post</span>
-        <form id="new-snippet-form">
-          <div class="input-field">
-            <input id="post-title" type="text" name="post-title" required>
-            <label for="post-title">Title</label>
+    {{! form to add a new post }}
+    <div id='create-post' class='card'>
+      <div class='card-content'>
+        <span class='card-title center-align'>Create A Post</span>
+        <form id='new-snippet-form'>
+          <div class='input-field'>
+            <input id='post-title' type='text' name='post-title' required />
+            <label for='post-title'>Title</label>
           </div>
-          <div class="input-field">
-            <input id="post-language" type="text" name="post-language" required>
-            <label for="post-language">Language</label>
+               <div class='input-field'>
+            <input
+              id='post-language'
+              type='text'
+              name='post-language'
+              required
+            />
+            <label for='post-language'>Language</label>
+                      </div>
+          <div class='input-field'>
+            <input
+              id='post-language'
+              type='text'
+              name='post-language'
+              required
+            />
+            <label for='post-language'>Language</label>
           </div>
-          <div class="input-field">
-            <textarea id="post-content" class="materialize-textarea" name="post-content" required></textarea>
-            <label for="post-content">Content</label>
+          <div class='input-field'>
+            <textarea
+              id='post-content'
+              class='materialize-textarea'
+              name='post-content'
+              required
+            ></textarea>
+            <label for='post-content'>Content</label>
           </div>
-          <button class="btn blue" type="submit">Create</button>
+          <button class='btn blue createBtn' type='submit'>Create</button>
         </form>
       </div>
+    </div>
+    <div class='row history'>
+      {{#if post.length}}
+        {{#each post}}
+          <div class='card blue-grey darken-1 currentPosts'>
+            <div class='card-content white-text'>
+              {{!-- <p class="language">{{category}}</p> --}}
+              <span class='card-title'>{{this.title}}</span>
+              <p>Category: {{this.category}}</p>
+              <p>{{this.body}}</p>
+              <p class='metadata'>Created at: {{format_date createdAt}}</p>
+              <div class='card-action'>
+                <a href='#'>Like</a>
+                <a href='#'>Save</a>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      {{else}}
+        <div class='card blue-grey darken-1 currentPosts'>
+          <div class='card-content white-text'>
+            {{!-- <p class="language">{{category}}</p> --}}
+            <span class='card-title valign center'>You have not created a post
+              yet!</span>
+          </div>
+        </div>
+      {{/if}}
     </div>
   </div>
 </div>
 
-
-<script src="/js/new.js"></script> 
+<script src='/js/new.js'></script>

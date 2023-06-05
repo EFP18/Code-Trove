@@ -12,6 +12,7 @@ router.post('/', withAuth, (req, res) => {
         title: body.title,
         body: body.body,
         language: body.language,
+
         user_id: req.session.user_id
     })
     .then((newPost) => {

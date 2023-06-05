@@ -50,7 +50,7 @@
               <li><a href='{{baseUrl}}/search'><i
                     class='material-icons'
                   >search</i></a></li>
-              <li><a href='{{baseUrl}}/login' class='btn blue btn-small'>Log Out</a></li>
+              <li><a id="logout" class='btn blue btn-small'>Log Out</a></li>
             {{else}}
               <li><a href='{{baseUrl}}/'>HOME</a></li>
               <li><a href='{{baseUrl}}/about'>ABOUT</a></li>
@@ -68,8 +68,12 @@
             <li><a href='{{baseUrl}}/search'><i
                   class='material-icons'
                 >search</i></a></li>
+                {{#if loggedIn}}
+          <li><a id="logout" class='btn blue btn-small'>Log Out</a></li>
+                {{else}}
             <li><a href='{{baseUrl}}/login' class='btn blue btn-small'>Log in</a></li>
             <li><a href='{{baseUrl}}/signup' class='btn blue btn-small'>Sign up</a></li>
+                {{/if}}
           </ul>
         </div>
       </div>
@@ -81,21 +85,25 @@ based on the functionality of the routes --}}
       {{{body}}}
     </main>
 
-    <footer>
-      <div class='footer-content'>
-        <div class='footer-left'>
-          <p class='success-text'>We got the code to your success.</p>
-          <p class='sub-text'>Transform your code, one snippet at a time.</p>
-          <p class='centered'> &copy; 2023 Code Trove. All Rights Reserved.</p>
-        </div>
-        <div class='footer-middle'>
-          <a href='{{baseUrl}}/terms'>Terms & Conditions</a>
-          <a href='{{baseUrl}}/privacy'>Privacy Policy</a>
-        </div>
-      </div>
-    </footer>
+<footer>
+  <div class='footer-top'>
+    <p class='success-text'>We got the code to your success.</p>
+    <p class='sub-text'>Transform your code, one snippet at a time.</p>
+  </div>
+  <div class='footer-bottom'>
+    <div></div>
+    <p class='copy'> &copy; 2023 Code Trove. All Rights Reserved.</p>
+    <div class='footer-links'>
+      <a href='{{baseUrl}}/terms'>Terms & Conditions</a>
+      <a href='{{baseUrl}}/privacy'>Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+
 
     <!--Import jQuery before materialize.js-->
+    <script src="/js/logout.js"></script>
     <script
       type='text/javascript'
       src='https://code.jquery.com/jquery-3.2.1.min.js'
