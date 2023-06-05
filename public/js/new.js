@@ -2,7 +2,7 @@ const newFormHandler = async function (event) {
   event.preventDefault();
 
   const title = document.querySelector('#post-title').value.trim();
-  const category = document.querySelector('#post-language').value.trim();
+  const language = document.querySelector('#post-language').value.trim();
   const body = document.querySelector('#post-content').value.trim();
 
   const response = await fetch(`/api/post`, {
@@ -10,7 +10,7 @@ const newFormHandler = async function (event) {
     body: JSON.stringify({
       title,
       body,
-      category,
+      language,
     }),
     headers: { 'Content-Type': 'application/json' },
   });

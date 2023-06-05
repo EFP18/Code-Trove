@@ -11,7 +11,8 @@ router.post('/', withAuth, (req, res) => {
     Post.create({
         title: body.title,
         body: body.body,
-        language: body.category,
+        language: body.language,
+
         user_id: req.session.user_id
     })
     .then((newPost) => {
@@ -27,8 +28,8 @@ router.put('/:id', withAuth, (req, res) => {
     Post.update(
         {
             title: req.body.title,
-            body: req.body.body,
-            language: req.body.category
+            language: body.language,
+            body: req.body.body
         },
         {
             where: {

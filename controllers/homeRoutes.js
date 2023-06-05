@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Post, Category } = require('../models');
 const withAuth = require('../middleware/auth');
+const PostCategory = require('../models/PostCategory');
 
 router.get('/', async (req, res) => {
   try {
@@ -11,13 +12,21 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: ['username'],
         },
+        {
+          model: Category, 
+          through: PostCategory
+        }
       ],
+
+      // limit 5 posts per page and in descending order
+      limit: 5,
+      order: [['id', 'desc']]
     });
 
     // Serialize data so the template can read it
     const posts = postDb.map((post) => post.get({ plain: true }));
 
-    // console.log(posts);
+    console.log(posts);
 
     // Pass serialized data and session flag into template
     res.render('feed', {
@@ -49,12 +58,14 @@ router.get('/profile', withAuth, async (req, res) => {
       where: {
         user_id: req.session.user_id,
       },
+      limit: 5,
       include: [
         {
           model: User,
           attributes: ['username'],
         },
       ],
+      order: [['id', 'desc']]
     });
 
     console.log(postDb);
