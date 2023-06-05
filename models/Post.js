@@ -20,6 +20,12 @@ Post.init(
     category: {
       type: DataTypes.STRING
     },
+    // IF USED IN MODEL CREATE JS FILE TO HIT A PUT ROUTE FOR api/post AND HAVE likeCount update + 1
+    // likeCount: {
+    //   type: DataTypes.INTEGER,
+    //   defaultValue: 0,
+    //   required: false
+    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
