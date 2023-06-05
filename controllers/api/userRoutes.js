@@ -2,11 +2,10 @@ const router = require('express').Router();
 const { User } = require('../../models');
 const { validateEmail } = require('../../utils/routeHelpers');
 
+// create a user account
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
-
-    console.log(userData.dataValues.id, '-----------------');
 
     req.session.user_id = userData.dataValues.id;
     req.session.username = userData.dataValues.username;
@@ -20,10 +19,9 @@ router.post('/', async (req, res) => {
   }
 });
 
+// login route
 router.post('/login', async (req, res) => {
   try {
-    console.log('\n --------login-------- \n')
-
     const isEmail = validateEmail(req.body.email_or_username);
     console.log(isEmail);
     const queryOptionsObj = {
@@ -35,10 +33,6 @@ router.post('/login', async (req, res) => {
     } else {
       queryOptionsObj.where.username = req.body.email_or_username;
     }
-
-    console.log(queryOptionsObj);
-
-    console.log('\n -------before-------\n')
 
     const userData = await User.findOne(queryOptionsObj);
 
