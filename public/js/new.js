@@ -14,8 +14,6 @@ const newFormHandler = async function (event) {
     }),
     headers: { 'Content-Type': 'application/json' },
   });
-  var data = await res.json();
-  //debugger;
 
   console.log('post created')
   const data = await response.json();
