@@ -21,8 +21,6 @@ router.get('/', async (req, res) => {
 
     // Pass serialized data and session flag into template
     res.render('feed', {
-    // TODO: change posts placeholder to actual feed
-    res.render('profile', {
       posts,
       loggedIn: Boolean(req.session.user_id)
     });
