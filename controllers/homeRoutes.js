@@ -17,6 +17,8 @@ router.get('/', async (req, res) => {
           through: PostCategory
         }
       ],
+
+      // limit 5 posts per page and in descending order
       limit: 5,
       order: [['id', 'desc']]
     });
