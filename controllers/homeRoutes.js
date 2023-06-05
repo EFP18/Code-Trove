@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
           attributes: ['username'],
         },
       ],
+      order: [['id', 'desc']]
     });
 
     // Serialize data so the template can read it
@@ -55,6 +56,7 @@ router.get('/profile', withAuth, async (req, res) => {
           attributes: ['username'],
         },
       ],
+      order: [['id', 'desc']]
     });
 
     console.log(postDb);
