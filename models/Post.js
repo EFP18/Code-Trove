@@ -14,6 +14,10 @@ Post.init(
     title: {
       type: DataTypes.STRING,
     },
+    language: { 
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     body: {
       type: DataTypes.TEXT,
     },

@@ -1,5 +1,3 @@
-// const {} = require('../../models');
-
 const router = require('express').Router();
 const { Post, User, PostCategory, Category } = require('../../models');
 
