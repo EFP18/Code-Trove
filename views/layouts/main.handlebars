@@ -1,3 +1,6 @@
+{{!-- basic layout for the website, upon which the rest of the project is being built --}}
+
+
 <html lang='en'>
 
   <head>
@@ -34,7 +37,7 @@
     <nav class='black'>
       <div class='container'>
         <div class='nav-wrapper'>
-          <a href='{{baseUrl}}' class='brand-logo'>CODE TROVE</a>
+          <a href='{{baseUrl}}/' class='brand-logo'>CODE TROVE</a>
           <a href='#' data-activates='mobile-demo' class='button-collapse'><i
               class='material-icons'
             >menu</i></a>
@@ -42,7 +45,8 @@
             {{#if loggedIn}}
               <li><a href='{{baseUrl}}/'>HOME</a></li>
               <li><a href='{{baseUrl}}/about'>ABOUT</a></li>
-              <li><a href='{{baseUrl}}/profile/'>PROFILE</a></li>
+              {{!-- TODO: add id on profile link --}}
+              <li><a href='{{baseUrl}}/profile'>PROFILE</a></li>
               <li><a href='{{baseUrl}}/search'><i
                     class='material-icons'
                   >search</i></a></li>
@@ -71,6 +75,8 @@
       </div>
     </nav>
 
+{{!-- add the different handlebar pages on the {{{body}}},
+based on the functionality of the routes --}}
     <main>
       {{{body}}}
     </main>

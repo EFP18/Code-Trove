@@ -14,10 +14,10 @@
 
 
 ### Description
-  Code Trove is a website that targets an audience of coders of all levels. It provides them with a platform where they can open an account and save important code snippets, boilerplate code, and more, in their profile. They can choose to make their profile private or public, and they can share their snippets with other coders. 
+  Code Trove is a website that targets an audience of coders of all levels. It provides them with a platform where they can open an account and save important code snippets, boilerplate code, and more, in their profile, as well as share their snippets with other coders. 
 
 ### Installation
-  In order for a user to run our project locally, they need to have VS Code installed. Once they open the project on VS Code, they need to install all the necessary dependencies by typing `npm i`. Then, the user needs to type `npm start`, which will activate their localhost, at which point the website can be accessed online. 
+  In order for a user to run our project locally, they need to have VS Code installed. Once they open the project on VS Code, they need to install all the necessary dependencies by typing `npm i`. Then, the user needs to type `npm start`, which will activate their localhost, at which point the website can be accessed online by typing http://localhost:3001/ in the URL field. 
 
   The project is deployed using `Heroku`, so anybody can access the website through the link mentioned above. 
 
@@ -67,15 +67,9 @@ Use this [project presentation template](https://docs.google.com/presentation/d/
 
 * Application GitHub URL submitted.
 
-### Repository Quality: 10%
 
-* Repository has a unique name.
 
-* Repository follows best practices for file structure and naming conventions.
 
-* Repository follows best practices for class/id-naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
 
 * Repository contains quality README file with description, screenshot, and link to deployed application.
 

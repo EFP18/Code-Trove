@@ -17,10 +17,14 @@ router.get('/', async (req, res) => {
     // Serialize data so the template can read it
     const posts = postDb.map((post) => post.get({ plain: true }));
 
+    // console.log(posts);
+
     // Pass serialized data and session flag into template
+    res.render('feed', {
     // TODO: change posts placeholder to actual feed
     res.render('profile', {
       posts,
+      loggedIn: Boolean(req.session.user_id)
     });
   } catch (err) {
     res.status(500).json(err);
@@ -31,6 +35,7 @@ router.get('/about', async (req, res) => {
   try {
     res.render('about', {
       pageName: 'About - Code Trove',
+      loggedIn: Boolean(req.session.user_id)
     });
   } catch (err) {
     res.status(500).json(err);
@@ -39,12 +44,12 @@ router.get('/about', async (req, res) => {
 
 // GET all posts of a specific user
 // use middleware to check if the user is logged in
-router.get('/profile/:id', withAuth, async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
   try {
     // GET all posts and JOIN with user
     const postDb = await Post.findAll({
       where: {
-        id: req.params.id,
+        user_id: req.session.user_id,
       },
       include: [
         {
