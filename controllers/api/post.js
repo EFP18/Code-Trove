@@ -11,7 +11,7 @@ router.post('/', withAuth, (req, res) => {
     Post.create({
         title: body.title,
         body: body.body,
-        category: body.category,
+        language: body.category,
         user_id: req.session.user_id
     })
     .then((newPost) => {
