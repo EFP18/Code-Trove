@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
           attributes: ['username'],
         },
       ],
+      limit: 5,
       order: [['id', 'desc']]
     });
 
@@ -50,6 +51,7 @@ router.get('/profile', withAuth, async (req, res) => {
       where: {
         user_id: req.session.user_id,
       },
+      limit: 5,
       include: [
         {
           model: User,
