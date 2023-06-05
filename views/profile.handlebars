@@ -1,60 +1,47 @@
 {{!-- rendering all posts for the profile page based on user id --}}
 
-<div class="container">
-  <div class="row">
-    <div class="col s12">
-      <div id="post-feed">
-        <div class="row">
-          <div class="col s12 m8">
-            <div class="card">
-              {{!-- <div class="card-content">
-
-                <div class="center-align">
-                  <h3 class="feed-title">Code Feed</h3>
-                </div>
-              </div> --}}
+{{!-- <div class="container"> --}}
+<div class="row">
+  <div class="col s12 m4 l2"></div>
+  <div class="col s12 m4 l8">
+    {{#each post}}
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+            {{!-- <p class="language">{{category}}</p> --}}
+            <span class="card-title">{{this.title}}</span>
+            <p>{{this.body}}</p>
+            <p class="metadata">Created at: {{format_date createdAt}}</p>
+            <div class="card-action">
+              <a href="#">Like</a>
+              <a href="#">Save</a>
             </div>
-            <div class="card">
-              <div class="card-content">
-                {{#each post}}
-                  {{!-- <p class="language">{{category}}</p> --}}
-                  <span class="card-title">{{this.title}}</span>
-                  <pre><code>{{this.body}}</code></pre>
-                  <p class="metadata">Created at: {{format_date createdAt}}</p>
-                  <div class="card-action">
-                    <a href="#">Like</a>
-                    <a href="#">Save</a>
-                  </div> 
-                {{/each}} 
-              </div>
-            </div>
+        </div>
+      </div>
+    {{/each}} 
 
 {{!-- form to add a new post --}}
-            <div id="create-post" class="card">
-              <div class="card-content">
-                <span class="card-title">Create A Post</span>
-                <form id="new-snippet-form">
-                  <div class="input-field">
-                    <input id="post-title" type="text" name="post-title" required>
-                    <label for="post-title">Title</label>
-                  </div>
-                  <div class="input-field">
-                    <input id="post-language" type="text" name="post-language" required>
-                    <label for="post-language">Language</label>
-                  </div>
-                  <div class="input-field">
-                    <textarea id="post-content" class="materialize-textarea" name="post-content" required></textarea>
-                    <label for="post-content">Content</label>
-                  </div>
-                  <button class="btn blue" type="submit">Create</button>
-                </form>
-              </div>
-            </div>
+    <div id="create-post" class="card">
+      <div class="card-content">
+        <span class="card-title">Create A Post</span>
+        <form id="new-snippet-form">
+          <div class="input-field">
+            <input id="post-title" type="text" name="post-title" required>
+            <label for="post-title">Title</label>
           </div>
-        </div>
+          <div class="input-field">
+            <input id="post-language" type="text" name="post-language" required>
+            <label for="post-language">Language</label>
+          </div>
+          <div class="input-field">
+            <textarea id="post-content" class="materialize-textarea" name="post-content" required></textarea>
+            <label for="post-content">Content</label>
+          </div>
+          <button class="btn blue" type="submit">Create</button>
+        </form>
       </div>
     </div>
   </div>
 </div>
+
 
 <script src="/js/new.js"></script> 
