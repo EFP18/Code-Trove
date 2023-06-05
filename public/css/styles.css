@@ -14,6 +14,23 @@ body {
   font-family: "Saira Condensed", sans-serif;
 }
 
+/* -------------------------------- */
+.flex {
+  display: flex;
+}
+
+.history {
+  width: 60%;
+}
+
+#create-post {
+  width: 35%;
+  height: 100%;
+}
+
+
+
+
 .feed-title {
   text-align: center;
   margin-bottom: 30px;
@@ -200,11 +217,22 @@ footer .success-text {
   font-weight: bold;
 }
 
-/* @media screen and (min-width: 768px) {
-  footer {
-    display: flex;
+@media screen and (max-width: 850px) {
+  .createPostRow {
+    flex-direction: column;
+   
   }
-} */
+  .history {
+    width: 90%;
+  }
+  
+  #create-post {
+    width: 90%;
+    margin: 20px auto 15px auto;;
+    height: 100%;
+  }
+} 
+
 @media screen and (max-width: 768px) {
   footer {
     display: none !important;

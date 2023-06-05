@@ -17,6 +17,9 @@ Post.init(
     body: {
       type: DataTypes.TEXT,
     },
+    category: {
+      type: DataTypes.STRING
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
