@@ -31,6 +31,7 @@
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/androidstudio.min.css">
   </head>
 
+  <body>
     <nav class='black'>
       <div class='container'>
         <div class='nav-wrapper'>
@@ -40,39 +41,39 @@
             >menu</i></a>
           <ul class='right hide-on-med-and-down'>
             {{#if loggedIn}}
-              <li><a href='{{baseUrl}}/'>HOME</a></li>
-              <li><a href='{{baseUrl}}/about'>ABOUT</a></li>
+              <li><a href='/'>HOME</a></li>
+              <li><a href='/about'>ABOUT</a></li>
               {{!-- TODO: add id on profile link --}}
-              <li><a href='{{baseUrl}}/profile'>PROFILE</a></li>
-              <li><a href='{{baseUrl}}/contact'>CONTACT US</a></li>
-              <li><a href='{{baseUrl}}/search'><i
+              <li><a href='/profile'>PROFILE</a></li>
+              <li><a href='/contact'>CONTACT US</a></li>
+              <li><a href='/search'><i
                     class='material-icons'
                   >search</i></a></li>
               <li><a id="logout" class='btn blue btn-small'>Log Out</a></li>
             {{else}}
-              <li><a href='{{baseUrl}}/'>HOME</a></li>
-              <li><a href='{{baseUrl}}/about'>ABOUT</a></li>
-              <li><a href='{{baseUrl}}/contact'>CONTACT US</a></li>
-              <li><a href='{{baseUrl}}/search'><i
+              <li><a href='/'>HOME</a></li>
+              <li><a href='/about'>ABOUT</a></li>
+              <li><a href='/contact'>CONTACT US</a></li>
+              <li><a href='/search'><i
                     class='material-icons'
                   >search</i></a></li>
-              <li><a href='{{baseUrl}}/login' class='btn blue btn-small'>Log in</a></li>
-              <li><a href='{{baseUrl}}/signup' class='btn blue btn-small'>Sign
+              <li><a href='/login' class='btn blue btn-small'>Log in</a></li>
+              <li><a href='/signup' class='btn blue btn-small'>Sign
                   up</a></li>
             {{/if}}
           </ul>
           <ul class='side-nav' id='mobile-demo'>
-            <li><a href='{{baseUrl}}/'>HOME</a></li>
-            <li><a href='{{baseUrl}}/about'>ABOUT</a></li>
-            <li><a href='{{baseUrl}}/contact'>CONTACT US</a></li>
-            <li><a href='{{baseUrl}}/search'><i
+            <li><a href='/'>HOME</a></li>
+            <li><a href='/about'>ABOUT</a></li>
+            <li><a href='/contact'>CONTACT US</a></li>
+            <li><a href='/search'><i
                   class='material-icons'
                 >search</i></a></li>
                 {{#if loggedIn}}
           <li><a id="logout2" class='btn blue btn-small'>Log Out</a></li>
                 {{else}}
-            <li><a href='{{baseUrl}}/login' class='btn blue btn-small'>Log in</a></li>
-            <li><a href='{{baseUrl}}/signup' class='btn blue btn-small'>Sign up</a></li>
+            <li><a href='/login' class='btn blue btn-small'>Log in</a></li>
+            <li><a href='/signup' class='btn blue btn-small'>Sign up</a></li>
                 {{/if}}
           </ul>
         </div>
@@ -85,22 +86,20 @@ based on the functionality of the routes --}}
       {{{body}}}
     </main>
 
-<footer>
-  <div class='footer-top'>
-    <p class='success-text'>We got the code to your success.</p>
-    <p class='sub-text'>Transform your code, one snippet at a time.</p>
-  </div>
-  <div class='footer-bottom'>
-    <div></div>
-    <p class='copy'> &copy; 2023 Code Trove. All Rights Reserved.</p>
-    <div class='footer-links'>
-      <a href='{{baseUrl}}/terms'>Terms & Conditions</a>
-      <a href='{{baseUrl}}/privacy'>Privacy Policy</a>
-    </div>
-  </div>
-</footer>
-
-
+    <footer>
+      <div class='footer-top'>
+        <p class='success-text'>We got the code to your success.</p>
+        <p class='sub-text'>Transform your code, one snippet at a time.</p>
+      </div>
+      <div class='footer-bottom'>
+        <div></div>
+        <p class='copy'> &copy; 2023 Code Trove. All Rights Reserved.</p>
+        <div class='footer-links'>
+          <a href='{{baseUrl}}/terms'>Terms & Conditions</a>
+          <a href='{{baseUrl}}/privacy'>Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
 
     <!--Import jQuery before materialize.js-->
     {{#if loggedIn}}
