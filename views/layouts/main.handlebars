@@ -69,7 +69,7 @@
                   class='material-icons'
                 >search</i></a></li>
                 {{#if loggedIn}}
-          <li><a id="logout" class='btn blue btn-small'>Log Out</a></li>
+          <li><a id="logout2" class='btn blue btn-small'>Log Out</a></li>
                 {{else}}
             <li><a href='{{baseUrl}}/login' class='btn blue btn-small'>Log in</a></li>
             <li><a href='{{baseUrl}}/signup' class='btn blue btn-small'>Sign up</a></li>
@@ -103,7 +103,9 @@ based on the functionality of the routes --}}
 
 
     <!--Import jQuery before materialize.js-->
+    {{#if loggedIn}}
     <script src="/js/logout.js"></script>
+    {{/if}}
     <script
       type='text/javascript'
       src='https://code.jquery.com/jquery-3.2.1.min.js'
