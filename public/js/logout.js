@@ -15,3 +15,4 @@ const logout = async (event) => {
 
 // grab element with id logout and add log out function
 document.querySelector('#logout').addEventListener('click', logout);
+document.querySelector('#logout2').addEventListener('click', logout);
