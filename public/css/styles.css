@@ -1,4 +1,4 @@
-Navigation
+/* Navigation */
 nav {
   position: relative;
   z-index: 1;
@@ -172,18 +172,24 @@ div.inner-box pre {
 
 /* Footer */
 footer {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   background-color: #000;
   color: #fff;
+  padding: 5px 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-top {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .footer-bottom {
@@ -215,12 +221,20 @@ footer .success-text {
   font-size: 30px;
   color: #58aaf2;
   font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+footer .sub-text {
+  font-size: 15px;
+  color: #f0f2f5;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 850px) {
   .createPostRow {
     flex-direction: column;
-   
   }
   .history {
     width: 90%;
@@ -238,3 +252,4 @@ footer .success-text {
     display: none !important;
   }
 }
+
