@@ -8,10 +8,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url("../img/background.jpg");
+  background-image: url('../img/background.jpg');
   background-size: cover;
   background-position: bottom;
-  font-family: "Saira Condensed", sans-serif;
+  font-family: 'Saira Condensed', sans-serif;
 }
 
 /* -------------------------------- */
@@ -117,7 +117,7 @@ div.inner-box pre {
 
 .center-align {
   text-align: center;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .language {
@@ -183,7 +183,7 @@ div.inner-box pre {
 
 /* Footer */
 footer {
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   bottom: 0;
   width: 100%;
@@ -252,17 +252,16 @@ footer .sub-text {
   .history {
     width: 90%;
   }
-  
+
   #create-post {
     width: 90%;
-    margin: 20px auto 15px auto;;
+    margin: 20px auto 15px auto;
     height: 100%;
   }
-} 
+}
 
 @media screen and (max-width: 768px) {
   footer {
     display: none !important;
   }
 }
-

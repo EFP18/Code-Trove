@@ -1,3 +1,5 @@
+{{! basic layout for the website, upon which the rest of the project is being built }}
+
 <html lang='en'>
 
   <head>
@@ -128,7 +130,7 @@
 
       <!--Import jQuery before materialize.js-->
     {{#if loggedIn}}
-      <script src="/js/logout.js"></script>
+      <script src='/js/logout.js'></script>
     {{/if}}
     <script type='text/javascript' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
     <script type='text/javascript' src='js/materialize.min.js'></script>
@@ -137,8 +139,13 @@
         $('.button-collapse').sideNav();
       });
     </script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script
+      src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js'
+    ></script>
     <script>hljs.highlightAll();</script>
+    <script>
+      $(document).ready(function() { $('select').material_select(); });
+    </script>
   </body>
 
 </html>
