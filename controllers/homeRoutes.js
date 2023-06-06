@@ -109,5 +109,16 @@ router.get('/signup', (req, res) => {
     pageName: 'Sign Up! - Code Trove',
   });
 });
+
+router.get('/contact', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  res.render('contact', {
+    pageName: 'Contact Us! - Code Trove',
+  });
+});
+
 module.exports = router;
 
