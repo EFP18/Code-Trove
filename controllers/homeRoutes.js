@@ -117,6 +117,8 @@ router.get('/contact', (req, res) => {
   }
   res.render('contact', {
     pageName: 'Contact Us! - Code Trove',
+    // bug fix to make log out button appear when clicking on contact us
+    // loggedIn: true,
   });
 });
 
