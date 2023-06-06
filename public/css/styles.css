@@ -15,6 +15,13 @@ body {
 }
 
 /* -------------------------------- */
+#sidenav-overlay {
+  z-index: 0 !important;
+}
+
+.side-nav {
+  z-index: 9999 !important;
+} 
 .flex {
   display: flex;
 }
@@ -26,6 +33,13 @@ body {
 #create-post {
   width: 35%;
   height: 100%;
+}
+.createBtnDiv {
+  display: flex;
+  justify-content: center;
+}
+.createBtn {
+  margin: 0 auto;
 }
 
 .feed-title {
