@@ -1,9 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class PostCategory extends Model {
-}
-
+class PostCategory extends Model {}
 
 PostCategory.init(
   {
@@ -13,21 +11,21 @@ PostCategory.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    category_id:{
+    category_id: {
       type: DataTypes.INTEGER,
-      references:{
-          model:'post',
-          key: 'id',
-          unique: false
-      }
+      references: {
+        model: 'post',
+        key: 'id',
+        unique: false,
+      },
     },
-    post_id:{
+    post_id: {
       type: DataTypes.INTEGER,
-      references:{
-          model:'category',
-          key: 'id',
-          unique: false
-      }
+      references: {
+        model: 'category',
+        key: 'id',
+        unique: false,
+      },
     },
   },
   {

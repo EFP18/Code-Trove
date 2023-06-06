@@ -13,14 +13,14 @@ router.get('/', async (req, res) => {
           attributes: ['username'],
         },
         {
-          model: Category, 
-          through: PostCategory
-        }
+          model: Category,
+          through: PostCategory,
+        },
       ],
 
       // limit 5 posts per page and in descending order
       limit: 5,
-      order: [['id', 'desc']]
+      order: [['id', 'desc']],
     });
 
     // Serialize data so the template can read it
@@ -31,7 +31,7 @@ router.get('/', async (req, res) => {
     // Pass serialized data and session flag into template
     res.render('feed', {
       posts,
-      loggedIn: Boolean(req.session.user_id)
+      loggedIn: Boolean(req.session.user_id),
     });
   } catch (err) {
     res.status(500).json(err);
@@ -42,7 +42,7 @@ router.get('/about', async (req, res) => {
   try {
     res.render('about', {
       pageName: 'About - Code Trove',
-      loggedIn: Boolean(req.session.user_id)
+      loggedIn: Boolean(req.session.user_id),
     });
   } catch (err) {
     res.status(500).json(err);
@@ -65,7 +65,7 @@ router.get('/profile', withAuth, async (req, res) => {
           attributes: ['username'],
         },
       ],
-      order: [['id', 'desc']]
+      order: [['id', 'desc']],
     });
 
     console.log(postDb);
@@ -118,9 +118,8 @@ router.get('/contact', (req, res) => {
   res.render('contact', {
     pageName: 'Contact Us! - Code Trove',
     // bug fix to make log out button appear when clicking on contact us
-    loggedIn: Boolean(req.session.user_id)
+    loggedIn: Boolean(req.session.user_id),
   });
 });
 
 module.exports = router;
-
