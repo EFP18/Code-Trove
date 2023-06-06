@@ -12,7 +12,7 @@
             <input id='post-title' type='text' name='post-title' required />
             <label for='post-title'>Title</label>
           </div>
-          <div class='input-field'>
+          {{! <div class='input-field'>
             <input
               id='post-language'
               type='text'
@@ -20,6 +20,19 @@
               required
             />
             <label for='post-language'>Language</label>
+          </div> }}
+          <div>
+            <label for='post-language'>Language</label>
+            <select id='post-language'>
+              <option value='' disabled selected>Select Language</option>
+              <option value='HTML'>HTML</option>
+              <option value='CSS'>CSS</option>
+              <option value='JS'>Javascript</option>
+              <option value='Java'>Java</option>
+              <option value='Cpp'>C++</option>
+              <option value='PHP'>PHP</option>
+              <option value='Ruby'>Ruby</option>
+            </select>
           </div>
           <div class='input-field'>
             <textarea
@@ -39,7 +52,7 @@
         {{#each post}}
           <div class='card blue-grey darken-1 currentPosts'>
             <div class='card-content white-text'>
-              <p class="language">{{this.language}}</p>
+              <p class='language'>{{this.language}}</p>
               <span class='card-title'>{{this.title}}</span>
               <pre><code>{{this.body}}</code></pre>
               <p class='metadata'>Created at: {{format_date createdAt}}</p>

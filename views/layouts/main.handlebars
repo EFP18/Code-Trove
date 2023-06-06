@@ -1,5 +1,4 @@
-{{!-- basic layout for the website, upon which the rest of the project is being built --}}
-
+{{! basic layout for the website, upon which the rest of the project is being built }}
 
 <html lang='en'>
 
@@ -27,8 +26,10 @@
       href='https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;700&display=swap'
       rel='stylesheet'
     />
-    <link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/androidstudio.min.css">
+    <link
+      rel='stylesheet'
+      href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/androidstudio.min.css'
+    />
   </head>
 
   <body>
@@ -43,13 +44,13 @@
             {{#if loggedIn}}
               <li><a href='/'>HOME</a></li>
               <li><a href='/about'>ABOUT</a></li>
-              {{!-- TODO: add id on profile link --}}
+              {{! TODO: add id on profile link }}
               <li><a href='/profile'>PROFILE</a></li>
               <li><a href='/contact'>CONTACT US</a></li>
               <li><a href='/search'><i
                     class='material-icons'
                   >search</i></a></li>
-              <li><a id="logout" class='btn blue btn-small'>Log Out</a></li>
+              <li><a id='logout' class='btn blue btn-small'>Log Out</a></li>
             {{else}}
               <li><a href='/'>HOME</a></li>
               <li><a href='/about'>ABOUT</a></li>
@@ -58,29 +59,26 @@
                     class='material-icons'
                   >search</i></a></li>
               <li><a href='/login' class='btn blue btn-small'>Log in</a></li>
-              <li><a href='/signup' class='btn blue btn-small'>Sign
-                  up</a></li>
+              <li><a href='/signup' class='btn blue btn-small'>Sign up</a></li>
             {{/if}}
           </ul>
           <ul class='side-nav' id='mobile-demo'>
             <li><a href='/'>HOME</a></li>
             <li><a href='/about'>ABOUT</a></li>
             <li><a href='/contact'>CONTACT US</a></li>
-            <li><a href='/search'><i
-                  class='material-icons'
-                >search</i></a></li>
-              {{#if loggedIn}}
-                <li><a id="logout2" class='btn blue btn-small'>Log Out</a></li>
-              {{else}}
-                <li><a href='/login' class='btn blue btn-small'>Log in</a></li>
-                <li><a href='/signup' class='btn blue btn-small'>Sign up</a></li>
-              {{/if}}
+            <li><a href='/search'><i class='material-icons'>search</i></a></li>
+            {{#if loggedIn}}
+              <li><a id='logout2' class='btn blue btn-small'>Log Out</a></li>
+            {{else}}
+              <li><a href='/login' class='btn blue btn-small'>Log in</a></li>
+              <li><a href='/signup' class='btn blue btn-small'>Sign up</a></li>
+            {{/if}}
           </ul>
         </div>
       </div>
     </nav>
 
-{{!-- add the different handlebar pages on the {{{body}}},
+    {{!-- add the different handlebar pages on the {{{body}}},
 based on the functionality of the routes --}}
     <main>
       {{{body}}}
@@ -102,7 +100,7 @@ based on the functionality of the routes --}}
 
     <!--Import jQuery before materialize.js-->
     {{#if loggedIn}}
-      <script src="/js/logout.js"></script>
+      <script src='/js/logout.js'></script>
     {{/if}}
     <script
       type='text/javascript'
@@ -113,8 +111,13 @@ based on the functionality of the routes --}}
       $(document).ready(function () { // Initialize Side Nav
       $('.button-collapse').sideNav(); });
     </script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script
+      src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js'
+    ></script>
     <script>hljs.highlightAll();</script>
+    <script>
+      $(document).ready(function() { $('select').material_select(); });
+    </script>
   </body>
 
 </html>
