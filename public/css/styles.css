@@ -4,6 +4,10 @@ nav {
   z-index: 1;
 }
 
+main {
+  flex: 1 0 auto;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -12,6 +16,8 @@ body {
   background-size: cover;
   background-position: bottom;
   font-family: 'Saira Condensed', sans-serif;
+  position: relative;
+  padding-bottom: 8rem;
 }
 
 /* -------------------------------- */
@@ -21,7 +27,7 @@ body {
 
 .side-nav {
   z-index: 9999 !important;
-} 
+}
 .flex {
   display: flex;
 }
@@ -183,6 +189,8 @@ div.inner-box pre {
 
 /* Footer */
 footer {
+  position: absolute;
+  display: inline-block;
   /* position: fixed; */
   left: 0;
   bottom: 0;
@@ -191,6 +199,7 @@ footer {
   color: #fff;
   padding: 5px 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
 }
 
 .footer-content {
