@@ -41,39 +41,39 @@
             >menu</i></a>
           <ul class='right hide-on-med-and-down'>
             {{#if loggedIn}}
-              <li><a href='{{baseUrl}}/'>HOME</a></li>
-              <li><a href='{{baseUrl}}/about'>ABOUT</a></li>
+              <li><a href='/'>HOME</a></li>
+              <li><a href='/about'>ABOUT</a></li>
               {{!-- TODO: add id on profile link --}}
-              <li><a href='{{baseUrl}}/profile'>PROFILE</a></li>
-              <li><a href='{{baseUrl}}/contact'>CONTACT US</a></li>
-              <li><a href='{{baseUrl}}/search'><i
+              <li><a href='/profile'>PROFILE</a></li>
+              <li><a href='/contact'>CONTACT US</a></li>
+              <li><a href='/search'><i
                     class='material-icons'
                   >search</i></a></li>
               <li><a id="logout" class='btn blue btn-small'>Log Out</a></li>
             {{else}}
-              <li><a href='{{baseUrl}}/'>HOME</a></li>
-              <li><a href='{{baseUrl}}/about'>ABOUT</a></li>
-              <li><a href='{{baseUrl}}/contact'>CONTACT US</a></li>
-              <li><a href='{{baseUrl}}/search'><i
+              <li><a href='/'>HOME</a></li>
+              <li><a href='/about'>ABOUT</a></li>
+              <li><a href='/contact'>CONTACT US</a></li>
+              <li><a href='/search'><i
                     class='material-icons'
                   >search</i></a></li>
-              <li><a href='{{baseUrl}}/login' class='btn blue btn-small'>Log in</a></li>
-              <li><a href='{{baseUrl}}/signup' class='btn blue btn-small'>Sign
+              <li><a href='/login' class='btn blue btn-small'>Log in</a></li>
+              <li><a href='/signup' class='btn blue btn-small'>Sign
                   up</a></li>
             {{/if}}
           </ul>
           <ul class='side-nav' id='mobile-demo'>
-            <li><a href='{{baseUrl}}/'>HOME</a></li>
-            <li><a href='{{baseUrl}}/about'>ABOUT</a></li>
-            <li><a href='{{baseUrl}}/contact'>CONTACT US</a></li>
-            <li><a href='{{baseUrl}}/search'><i
+            <li><a href='/'>HOME</a></li>
+            <li><a href='/about'>ABOUT</a></li>
+            <li><a href='/contact'>CONTACT US</a></li>
+            <li><a href='/search'><i
                   class='material-icons'
                 >search</i></a></li>
                 {{#if loggedIn}}
           <li><a id="logout2" class='btn blue btn-small'>Log Out</a></li>
                 {{else}}
-            <li><a href='{{baseUrl}}/login' class='btn blue btn-small'>Log in</a></li>
-            <li><a href='{{baseUrl}}/signup' class='btn blue btn-small'>Sign up</a></li>
+            <li><a href='/login' class='btn blue btn-small'>Log in</a></li>
+            <li><a href='/signup' class='btn blue btn-small'>Sign up</a></li>
                 {{/if}}
           </ul>
         </div>
