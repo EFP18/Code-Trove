@@ -50,7 +50,7 @@
               <li><a href='{{baseUrl}}/search'><i
                     class='material-icons'
                   >search</i></a></li>
-              <li><a class='logout btn blue btn-small'>Log Out</a></li>
+              <li><a id="logout" class='btn blue btn-small'>Log Out</a></li>
             {{else}}
               <li><a href='{{baseUrl}}/'>HOME</a></li>
               <li><a href='{{baseUrl}}/about'>ABOUT</a></li>
@@ -69,7 +69,7 @@
                   class='material-icons'
                 >search</i></a></li>
                 {{#if loggedIn}}
-          <li><a class='logout btn blue btn-small'>Log Out</a></li>
+          <li><a id="logout" class='btn blue btn-small'>Log Out</a></li>
                 {{else}}
             <li><a href='{{baseUrl}}/login' class='btn blue btn-small'>Log in</a></li>
             <li><a href='{{baseUrl}}/signup' class='btn blue btn-small'>Sign up</a></li>
