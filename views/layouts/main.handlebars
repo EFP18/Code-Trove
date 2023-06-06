@@ -35,7 +35,7 @@
     <nav class='black'>
       <div class='container'>
         <div class='nav-wrapper'>
-          <a href='{{baseUrl}}/' class='brand-logo'>CODE TROVE</a>
+          <a href='/' class='brand-logo'>CODE TROVE</a>
           <a href='#' data-activates='mobile-demo' class='button-collapse'><i
               class='material-icons'
             >menu</i></a>
@@ -69,12 +69,12 @@
             <li><a href='/search'><i
                   class='material-icons'
                 >search</i></a></li>
-                {{#if loggedIn}}
-          <li><a id="logout2" class='btn blue btn-small'>Log Out</a></li>
-                {{else}}
-            <li><a href='/login' class='btn blue btn-small'>Log in</a></li>
-            <li><a href='/signup' class='btn blue btn-small'>Sign up</a></li>
-                {{/if}}
+              {{#if loggedIn}}
+                <li><a id="logout2" class='btn blue btn-small'>Log Out</a></li>
+              {{else}}
+                <li><a href='/login' class='btn blue btn-small'>Log in</a></li>
+                <li><a href='/signup' class='btn blue btn-small'>Sign up</a></li>
+              {{/if}}
           </ul>
         </div>
       </div>
@@ -92,18 +92,17 @@ based on the functionality of the routes --}}
         <p class='sub-text'>Transform your code, one snippet at a time.</p>
       </div>
       <div class='footer-bottom'>
-        <div></div>
         <p class='copy'> &copy; 2023 Code Trove. All Rights Reserved.</p>
         <div class='footer-links'>
-          <a href='{{baseUrl}}/terms'>Terms & Conditions</a>
-          <a href='{{baseUrl}}/privacy'>Privacy Policy</a>
+          <a href='/terms'>Terms & Conditions</a>
+          <a href='/privacy'>Privacy Policy</a>
         </div>
       </div>
     </footer>
 
     <!--Import jQuery before materialize.js-->
     {{#if loggedIn}}
-    <script src="/js/logout.js"></script>
+      <script src="/js/logout.js"></script>
     {{/if}}
     <script
       type='text/javascript'
