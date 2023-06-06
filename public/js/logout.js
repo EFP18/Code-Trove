@@ -1,6 +1,6 @@
 // create log out function with a post route
 const logout = async (event) => {
-  event.preventDefault()
+  event.preventDefault();
   const response = await fetch('/api/user/logout', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
