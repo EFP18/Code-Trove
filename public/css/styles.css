@@ -204,6 +204,7 @@ footer {
 }
 
 .footer-links a {
+  font-size: 10px;
   color: #888888;
   text-decoration: none;
 }
@@ -213,6 +214,7 @@ footer {
 }
 
 .copy {
+  font-size: 10px;
   text-align: center;
   margin-right: -10%;
 }
