@@ -1,3 +1,5 @@
+//helper function for signing up.
+
 const signupForm = async (event) => {
   event.preventDefault();
 

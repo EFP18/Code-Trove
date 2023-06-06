@@ -1,3 +1,5 @@
+//helper function to create new post 
+
 const newFormHandler = async function (event) {
   event.preventDefault();
 

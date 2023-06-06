@@ -1,3 +1,5 @@
+
+//Creates connection gor sequelize
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
