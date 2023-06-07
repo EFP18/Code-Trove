@@ -1,3 +1,5 @@
+//helper functions for login
+
 const loginFormEl = document.querySelector('#login');
 
 const showError = (parentEl, errorText) => {

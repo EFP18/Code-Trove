@@ -1,3 +1,5 @@
+//through table for postCategory model
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 

@@ -1,3 +1,5 @@
+//connecting route for user, post, and categoryRoutes
+
 const router = require('express').Router();
 
 const userRoutes = require('./userRoutes.js');

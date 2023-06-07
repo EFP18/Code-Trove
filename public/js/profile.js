@@ -1,3 +1,5 @@
+//helper function to display user post
+
 const loadProfilePosts = async () => {
   const userId = localStorage.getItem('userId');
 
