@@ -6,7 +6,7 @@ https://opensource.org/licenses/MIT
 
 GitHub Repository: https://github.com/EFP18/Code-Trove
 
-Deployed in Heroku: 
+Deployed in Heroku: https://code-trove.herokuapp.com/
 
 ## Table of Contents
 
